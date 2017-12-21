@@ -1,10 +1,10 @@
-import { WithdrawIndexPage } from './../withdraw-index/withdrawindex';
 import { Component,OnInit } from '@angular/core';
 import { NavController, NavParams,ActionSheetController } from 'ionic-angular';
 import { HelpPage } from './../help/help';
 import { HomePage } from './../home/home';
 import { DepositPage } from './../deposit/deposit';
-
+import { TransferPage } from './../transfer/transfer';
+import { WithdrawIndexPage } from './../withdraw-index/withdrawindex';
 
 @Component({
   selector: 'page-balance',
@@ -19,7 +19,7 @@ export class BalancePage {
   }
 
   home(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(TransferPage);
   }
 
   costumerService(){

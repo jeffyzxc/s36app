@@ -1,0 +1,32 @@
+<ion-tabs #myTabs color=gray>
+  
+  <ion-tab [root]="home" [navPush]="login" tabTitle="家" tabIcon="appname-home"></ion-tab>
+  <ion-tab [root]="balance" (ionSelect)="loginNotify(test)" tabTitle="我的钱包" tabIcon="appname-wallet"></ion-tab>
+  <ion-tab  [root]="transfer" (ionSelect)="loginNotify(test)" tabTitle="户内转帐" tabIcon="appname-transfer"></ion-tab>
+  <ion-tab [root]="history"  (ionSelect)="loginNotify(test)" tabTitle="交易记录  " tabIcon="ios-folder"></ion-tab>
+  <ion-tab  [root]="personal" (ionSelect)="loginNotify(test)" tabTitle="个人设定" tabIcon="ios-person"></ion-tab>
+
+
+
+   <!--
+  <ion-tab [root]="balance" tabTitle="我的钱包" tabIcon="appname-wallet"></ion-tab>
+  <ion-tab [root]="transfer" tabTitle="户内转帐" tabIcon="appname-transfer"></ion-tab>
+  <ion-tab [root]="history" tabTitle="交易记录  " tabIcon="ios-folder"></ion-tab>
+  <ion-tab [root]="personal" tabTitle="个人设定" tabIcon="ios-person"></ion-tab>
+
+ 
+  <ion-tab [root]="withdraw" tabTitle="我要取款" tabIcon="md-cash"></ion-tab>
+  <ion-tab [root]="home" tabTitle="家" tabIcon="home"></ion-tab>
+  
+  <ion-tab [root]="deposit" tabTitle="我要存款" tabIcon="ios-card"></ion-tab>
+  <ion-tab [root]="personal" tabTitle="个人设定" tabIcon="ios-person"></ion-tab>
+
+  <ion-tab [root]="personal" tabTitle="个人设定" tabIcon="ios-person"></ion-tab>
+  
+  -->
+  <!--
+  <ion-tab [root]="transfer" tabTitle="户内转帐" tabIcon="md-git-compare"></ion-tab>
+  <ion-tab [root]="history" tabTitle="交易记録" tabIcon="md-folder"></ion-tab>
+  -->
+
+</ion-tabs> 

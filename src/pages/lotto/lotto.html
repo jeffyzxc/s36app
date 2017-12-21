@@ -1,0 +1,65 @@
+<ion-header>
+    <page-navbar [titleText]="'彩票'">
+      </page-navbar>    
+</ion-header>
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+  <page-header></page-header>
+  
+  <div padding style="padding-bottom:26px;padding-left:5px;padding-right:5px;">
+    <!--
+      <ion-row>
+          <ion-col>
+            
+            <select  class="select" value="all" id="type" name="category" [ngModel]="'all'"  #category="ngModel" (ngModelChange)="filter($event)"> 
+              <option value="all">所有优惠</option>
+              <option value="高频彩种">高频彩种</option>
+              <option value="VR真人彩">VR真人彩</option>
+              </select>
+          </ion-col>
+      </ion-row>
+    -->
+    <div style="width: 90%;margin: 0 auto;">
+        <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px; " class="classic"  value="all" id="type" name="category" [ngModel]="'all'"  #category="ngModel" (ngModelChange)="filter($event)">
+            <option value="all">所有优惠</option>
+            <option value="高频彩种">高频彩种</option>
+            <option value="VR真人彩">VR真人彩</option>
+          </select>
+    </div>
+
+      <ion-row style="margin-top:10px;">
+          <ion-col *ngFor="let item of lottoCollection;let i = index;let last = last" style="padding-top:20px;padding-left:2px;"  [ngClass]="((i+1) % 2 == 0  ? 'border-right' : 'border-left')+' '+((last) ? 'no-border-bottom':'')
+            +' '+( (((i+1)==lottoCollection.length-1) && (lottoCollection.length % 2 == 0)) ? 'no-border-bottom' : '' )" col-6>
+            
+            <div class="card">
+              <div class="image"> 
+                  <img width="95%" src="./assets/lotto/{{item.image}}.png" alt="">
+              </div>
+    
+              
+    
+                <div class="contents">
+
+                  <div class="title">
+                      <h6>{{item.title}}</h6>
+                  </div>
+                  <div class="body-card">
+                    <div class="details">{{item.description}}</div>
+                    <div class="details">{{ item.reward }}</div>
+                    <button class="btn-lotto text-black" ion-button color=orange full>立即购买</button>
+                 </div>
+               
+              </div>
+            </div>
+          </ion-col>
+
+      </ion-row>
+  </div>
+
+
+  <page-footer [content]="c"></page-footer>
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+  </ion-footer>

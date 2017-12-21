@@ -1,0 +1,24 @@
+page-withdraw-help {
+    .help-table {
+        border: 1px solid;
+        border-collapse: separate;
+        margin: 0 auto;
+        text-align: center;
+        table-layout: fixed;
+    }
+
+    .help-table td {
+        padding: 6px;
+        border: 1px solid;
+        vertical-align: middle;
+        color:gray;
+    }
+
+    h3 {
+        color: #e0a422;
+    }
+
+    p {
+        color:gray;
+    }
+}

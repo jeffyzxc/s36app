@@ -1,0 +1,27 @@
+page-tabs {
+
+  
+  .tabs-md-gray .tab-button:hover:not(.disable-hover),
+  .tabs-md-gray .tab-button[aria-selected=true],
+  .tabs-md-gray .tab-button[aria-selected=true] .tab-button-icon {
+    color: rgb(255, 200, 0);
+  }
+
+
+
+
+    .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
+      font-family: Georgia, Times New Roman, Microsoft YaHei, 微软雅黑, STXihei, 华文细黑, serif;
+    }
+
+
+    .tabs-md-gray .tabbar{
+      opacity: 0.9;
+    }
+
+  
+    
+
+
+    
+}

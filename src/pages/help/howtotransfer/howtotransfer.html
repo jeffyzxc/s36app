@@ -1,0 +1,147 @@
+<ion-header>  
+    <page-navbar  [titleText]="'如何转帐'">
+      </page-navbar>    
+</ion-header>
+    
+    
+    <ion-content [fullscreen]="true" class="black-background" #c>
+    
+      <page-header>
+        
+      </page-header>
+
+
+      <div [hidden]="isHide" padding style="padding-bottom: 26px;">
+        <h3 style="color: #e0a422;">
+          登录账号
+        </h3>
+        <p>
+          1，点击上方“登入”；
+        </p>
+        <p>
+          2，填写账号密码并成功登录；
+        </p>
+        <h3 style="color: #e0a422;">
+          开始转账
+        </h3>
+        <p>
+          1，在下方导航点击“户内转账”；
+        </p>
+        <p>
+          2，选择“转出账户”；
+        </p>
+        <p>
+          3，选择“转入账户”；
+        </p>
+        <p>
+          4，输入金额；
+        </p>
+        <p>
+          5，填写验证码并点击提交。
+        </p>
+        <p>
+          6，转账成功。
+        </p>
+      </div>
+
+      <div [hidden]="!isHide" padding style="padding-bottom: 26px;">
+          <h3 style="color: #e0a422;">
+              登录账号
+          </h3>
+          <p>
+              1，点击上方“登入”；
+          </p>
+          <p>
+              2，填写账号密码并成功登录；
+          </p>
+          <h3 style="color: #e0a422;">
+              开始转账
+          </h3>
+          <p>
+              1，在下方导航点击“我的钱包”；
+          </p>
+          <p>
+              2，点击“我要提款”；
+          </p>
+          <p>
+              3，阅读注意事项
+          </p>
+          <p>
+              4，选择“取款数额”并确认；
+          </p>
+          <p>
+              5，输入金额、银行账户号码、银行账户户名、选择银行、省市地区和取款密码；
+          </p>
+          <p>
+              6，点击确认进行提交。
+          </p>
+          <p>
+              7，提款申请成功。
+          </p>
+        </div>
+
+        
+     
+    
+    
+      
+     
+      
+      
+    
+     
+      
+     
+
+
+      <!--
+      <div padding style="padding-bottom: 26px;">
+          <a class="left carousel-control"> <span style="position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+            margin-top: -10px;"> <ion-icon  (click)="prev()" style="zoom:2.0;" name="ios-arrow-back-outline"></ion-icon>
+            </span>
+            </a>
+            <a  class="right carousel-control"> <span style="position: absolute;
+              top: 50%;
+              z-index: 5;
+              display: inline-block;
+              margin-top: -10px;"> <ion-icon (click)="next()" style="zoom:2.0;" name="ios-arrow-forward-outline"></ion-icon>
+              </span>
+              </a>
+          <ion-slides style="border-bottom:1px solid gray;" pager loop="true"> 
+
+           
+                 <ion-slide>
+                   <img src="./assets/help/howtotransfer/transfer_01.jpg">           
+                 </ion-slide>
+                 <ion-slide>
+                    <img src="./assets/help/howtotransfer/transfer_02.jpg">
+                 </ion-slide>
+                 <ion-slide>
+                    <img src="./assets/help/howtotransfer/transfer_03.jpg">
+                 </ion-slide>
+                 <ion-slide>
+                    <img src="./assets/help/howtotransfer/transfer_04.jpg">
+                  </ion-slide>
+                  <ion-slide>
+                     <img src="./assets/help/howtotransfer/transfer_05.jpg">
+                  </ion-slide>
+                  <ion-slide>
+                     <img src="./assets/help/howtotransfer/transfer_06.jpg">
+                  </ion-slide>
+          </ion-slides>
+
+      </div>
+    -->
+
+
+          <page-footer [content]="c"></page-footer>
+    
+    
+    </ion-content>
+    <ion-footer>
+      <page-tabs2></page-tabs2>
+    </ion-footer>
+                  

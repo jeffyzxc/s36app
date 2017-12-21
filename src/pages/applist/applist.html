@@ -1,0 +1,23 @@
+<ion-header>
+    <page-navbar>
+      </page-navbar>    
+</ion-header>
+
+<ion-content  [fullscreen]="true" class="black-background" >
+
+                <page-header></page-header>
+    
+    <ion-grid align="center" padding>
+      <ion-row class="menu-row">
+        <ion-col col-4 *ngFor="let item of appListCollection">
+            <img src="./assets/apps/{{ item.image }}.png" alt="">
+            <h5 style="color:White"> {{ item.title }} </h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

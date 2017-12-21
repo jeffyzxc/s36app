@@ -1,0 +1,215 @@
+<ion-header>
+        <page-navbar [titleText]="'我要提款'">
+          </page-navbar>    
+</ion-header>
+
+
+      
+    
+<ion-content class="black-background" [fullscreen]="true" style="text-align: center;" #c> 
+        <page-header></page-header>
+        <!--
+<div id="country">
+    <div id="index">
+     
+        <ul>
+          <li>
+              <h6 style="color:#05a0ca; ">取款注意事项:</h6>           
+          </li>
+  
+          <li>
+              <h6 style="color:white;  ">银行帐户持有人姓名必须与注册时的姓名一致，否则无法申请取款；</h6>           
+          </li>
+          <li>
+              <h6 style="color:white;  ">24小时内可申请3次提款，每次最低 100元人民币，最高上限为 30万元人民币；(VIP客户最高上限为100万人民币)</h6>           
+          </li>
+          <li>
+              <h6 style="color:white;  ">只需达到存款额的1倍有效投注额即可申请提款；:</h6>           
+          </li>
+          <li>
+              <h6 style="color:white;  ">2所有取款均不收取任何手续费；</h6>           
+          </li>
+          <li>
+              <h6 style="color:white;  ">本公司並不提供付款予第三者服务。</h6>           
+          </li>
+          <br>
+          <br>
+          <div id="input">
+          <li>
+            
+              <input type="text" placeholder="取款金额: RMB" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              <br>
+              <br>
+          </li>
+          <li>
+            
+              <input type="text" placeholder="银行帐户号码" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              <br>
+              <br>
+          </li>
+          <li>
+             
+              <input type="text" placeholder="确认银行帐户号码" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              <br>
+              <br>
+          </li>
+          <li>
+         
+              <input type="text" placeholder="银行帐户户名" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              <br>
+              <br>
+          </li>
+
+          <li>
+            
+              <select class="classic">
+                  <option>请选择</option>
+                  <option>农业银行 - 周XX - 064C</option>
+                  <option>农业银行 - 吴XX - 861A</option>
+                  <option>农业银行 - 贺XX - 377B</option>
+                  <option>农业银行 - 钱XX - 076D</option>
+                </select>
+                <br>
+                <br>
+          </li>
+
+          <li>
+            
+              <input type="text" placeholder="省份" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              <br>
+              <br>
+
+          </li>
+          <li>
+              
+                <input type="text" placeholder="城市" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+                <br>
+                <br>
+
+            </li>
+            <li>
+                
+                  <input type="text" placeholder="取款密码" style="height:37px; width:268px; background-color:#cacacc;color:#818282">
+              </li>
+              <li>
+                  
+                  <ion-textarea type="text" placeholder="备注" style="background-color:#cacacc; width:270px; height:250px; margin:0 auto; "></ion-textarea>
+                  <br>
+                  <br>
+                </li>
+
+                <li>
+                    <button style="width:200px;" color=gold ion-button icon-left>     
+                        <b class="text-black">确定</b>
+                </button>
+          
+                </li>
+              </div>
+        </ul>
+      </div>
+
+                        </div>
+            
+-->
+<div class="container clubs-account">
+
+<div class="clubs-row">
+    <div class="withdraw-title">取款注意事项:</div>
+    <div class="withdraw-content">
+        <p>银行帐户持有人姓名必须与注册时的姓名一致，否则无法申请取款；</p>
+        <p>24小时内可申请3次提款，每次最低 100元人民币，最高上限为 30万元人民币；<span>(VIP客户最高上限为100万人民币)</span></p>
+        <p>只需达到存款额的1倍有效投注额即可申请提款；</p>
+        <p>所有取款均不收取任何手续费；</p>
+        <p>本公司並不提供付款予第三者服务。</p>
+    </div>
+</div>
+<form id="WithdrawFrom" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+<div class="clubs-row">
+    <input style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-comparenumber="提款余额不足" data-val-comparenumber-operatortype="<=" data-val-comparenumber-otherproperty="MainAccountBalance" data-val-number="The field WithdrawAmount must be a number." data-val-range="取款金额必须少过或等于主帐户余额，最低为100元,最高上限为 4,999元人民币。" data-val-range-max="4999" data-val-range-min="100" data-val-regex="请输入整数" data-val-regex-pattern="([0-9]+)" data-val-required="请输入取款金额" id="WithdrawAmount" input-filter="numeric" input-filter-options-integer="true" maxlength="4" name="WithdrawAmount" placeholder="取款金额: RMB" type="text" value=""
+    required ngModel #WithdrawAmount="ngModel">
+    <span *ngIf="WithdrawAmount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="WithdrawAmount" data-valmsg-replace="true">
+        <span for="WithdrawAmount" class="">请输入取款金额</span>
+    </span>
+</div>
+    <div class="clubs-row">
+        <input style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入账户号码" name="AccountNo" placeholder="银行帐户号码" type="text" value=""
+        required ngModel #AccountNo="ngModel">
+            <span *ngIf="AccountNo.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="AccountNo" data-valmsg-replace="true">
+                <span for="AccountNo" class="">请输入账户号码</span>
+            </span>
+    </div>
+    <div class="clubs-row">
+        <input style="border-radius:4px;" class="form-control input-lg clubs-input valid" data-val="true" data-val-equalto="确认账号如账号不一致" data-val-equalto-other="*.AccountNo" name="ConfirmAccountNo" placeholder="确认银行帐户号码" type="text" value="">
+        <span class="field-validation-valid" data-valmsg-for="ConfirmAccountNo" data-valmsg-replace="true"></span>
+    </div>
+    <div class="clubs-row">
+        <input style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入账户姓名" name="AccountName" placeholder="银行帐户户名" type="text" value=""
+        required ngModel #AccountName="ngModel">
+        <span *ngIf="AccountName.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="AccountName" data-valmsg-replace="true">
+            <span for="AccountName" class="">请输入账户姓名</span>
+        </span>
+    </div>
+    <div class="clubs-row">
+        <select style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请选择取款银行" name="BankCode" required ngModel #BankCode="ngModel">
+            <option selected="selected" value="">请选择</option>
+            <option value="工商银行">工商银行</option>
+            <option value="建设银行">建设银行</option>
+            <option value="农业银行">农业银行</option>
+            <option value="中国银行">中国银行</option>
+            <option value="交通银行">交通银行</option>
+        </select>
+        <span *ngIf="BankCode.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="BankCode" data-valmsg-replace="true">
+            <span for="BankCode" class="">请选择取款银行</span>
+        </span>
+    </div>
+    <div class="clubs-row">
+        <input style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入省份" name="Province" placeholder="省份" type="text" value=""
+        required ngModel #Province="ngModel">
+        <span *ngIf="Province.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="Province" data-valmsg-replace="true">
+            <span for="Province" class="">请输入省份</span>
+        </span>
+    </div>
+    <div class="clubs-row">
+        <input style="border-radius:4px;" class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入城市" name="City" placeholder="城市" type="text" value=""
+        required ngModel #City="ngModel">
+        <span *ngIf="City.errors?.required && f.submitted"  class="field-validation-error" data-valmsg-for="City" data-valmsg-replace="true">
+            <span for="City" class="">请输入城市</span>
+        </span>
+    </div>
+    <div class="clubs-row"><input class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入取款密码" id="WithdrawPassword" name="WithdrawPassword" placeholder="取款密码" type="password"
+        required ngModel #WithdrawPassword="ngModel">
+        <span  *ngIf="WithdrawPassword.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="WithdrawPassword" data-valmsg-replace="true">
+            <span for="WithdrawPassword" class="">请输入取款密码</span>
+        </span>
+    </div>
+    <div class="clubs-row"
+    ><textarea style="font-size:18px;border-radius:4px;" class="clubs-textarea" cols="40" id="Remark" name="Remark" placeholder="备注" rows="5"></textarea><span class="field-validation-valid" data-valmsg-for="Remark" data-valmsg-replace="true"></span></div>
+    <div class="clubs-row">
+        <button type="submit" ion-button full color=gold class="text-black">确定</button>
+    </div>
+
+    
+</form>
+<div class="clubs-row" padding-bottom>
+    <div class="withdraw-content">
+        <div class="withdraw-title">快速到帐服务：</div>
+        <p>30 万元以内的取款金额 ，在任何时间申请，均可在1小时到帐。</p>
+        <p>30 万元以上的金额， 将会在每日09:00 至 15:30 之间 进行处理，并在当日到帐。</p>
+        <div class="withdraw-title">目前以下银行支援1小时快速到帐服务：</div>
+        <p>中国农业银行、中国工商银行、中国建设银行（不包括第三方“乐付”取款功能）。</p>
+    </div>
+</div>
+</div>
+
+
+    <page-footer [content]="c">
+    </page-footer>
+
+</ion-content>    
+
+
+<ion-footer>
+    <page-tabs2></page-tabs2>
+</ion-footer>
+                

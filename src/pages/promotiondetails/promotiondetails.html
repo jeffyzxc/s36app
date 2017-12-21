@@ -1,0 +1,1315 @@
+<ion-header>
+                <page-navbar  [titleText]="'优惠详情'">
+                  </page-navbar>    
+</ion-header>
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+
+
+  <page-header></page-header>
+<div padding style="padding-bottom: 26px;">
+    <div style="width: 90%;margin:0 auto;">
+      <div *ngIf="!isLogin" padding>
+        <button (click)="getPromo()" style="color:black" ion-button full color=gold>马上加入会员</button>
+      </div>
+      <div *ngIf="isLogin" padding>
+                <button  (click)="getPromo()" style="color:black" ion-button full color=gold>领取优惠</button>
+      </div>
+      
+      
+      <!--
+      <div [hidden]="page[1]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+              <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                会员于捕鱼中进行游戏，即可享有0.8%无上限返水优惠。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  活动从北京时间2017年07月01日12:00PM正式开始, 不设有限日期。 <br>本活动计算范围是每周一00:00至周日23:59于捕鱼中的累计投注额。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  所有合资格者将会以周结形式获赠上述的0.8%无上限返水优惠。<br>
+                  例如：周结总投注额＝200，000 <br>
+                  0.8%游戏返水 = 200,000 x 0.8% = 1,600 <br>
+                  0.8%的无上限游戏返水将会在每周结算日后72小时内自动存入合资格会员的账户内。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。 
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+              </ion-col> 
+              <ion-col col-12 no-padding>
+                  我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  我司保留对本优惠的最终解悉权。
+              </ion-col>
+            </ion-row>
+      </div>
+-->
+        <!-- 1 -->
+      <div [hidden]="page[1]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+              <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                  老虎机负盈利 8%返还奖金
+              </ion-col>
+              <ion-col col-12 style="padding-left: 0px;">
+                  即日起至2017/10/01(日)00:00前有效，在SA“沙龙坊”所有 老虎机游戏，负盈利达到要求，即可获得返还奖金。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  活动时间：即日起至2017/10/01(日)00:00前有效。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  活动内容：活动期间，在SA“沙龙坊”所有老虎机游戏，负盈利达到要求，即可获得返还奖金。 
+              </ion-col>
+              <ion-col col-12>
+                  <table style="width: 100%" border="0" cellpadding="1" cellspacing="1" >
+                      <tbody>
+                        <tr>
+                          <td height="28" align="center" >负盈利</td>
+                          <td height="28" align="center" >返还奖金</td>
+                  
+                          <td height="28" align="center" >单次最高金额</td>
+                        </tr>
+                        <tr>
+                          <td height="28" align="center" >100元或以上</td>
+                          <td height="28" align="center" >8%</td>
+                  
+                          <td height="28" align="center" >8,888元</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </ion-col> 
+              <ion-col col-12 no-padding>
+                  该优惠仅限老虎机负盈利会员 ，累计负盈利达100元或以上，符合条件方可申请。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  符合之会员请于24小时内通过“马上办理”按钮提出申请。 
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  若发现在非指定老虎机中进行投注，将取消其相关奖金及盈利。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  沙龙会官方将会保留随时变更活动，以及暂停、延长、提前终止本活动之权利，并将会在本司官方网站上公告。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  若以任何违反诚信原则之方法取得资格者，该所获得之活动资格及回馈，本公司将迳予以取消，并不另行通知。
+              </ion-col>
+            </ion-row>
+      </div>
+      <!-- 5 -->
+      <div [hidden]="page[5]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+              <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                0.8%无上限返水优惠
+              </ion-col>
+              <ion-col col-12 style="padding-left: 0px;">
+
+                会员于彩票中进行游戏，即可享有0.8%无上限返水优惠。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                
+                        活动从北京时间2017年07月01日12:00PM正式开始, 不设有限日期。  <br>
+本活动计算范围是每周一00:00至周日23:59于彩票中的累计投注额。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                
+                
+                        所有合资格者将会以周结形式获赠上述的0.8%无上限返水优惠。<br>
+例如：周结总投注额＝200，000  <br>
+0.8%游戏返水 = 200,000 x 0.8% = 1,600 <br>
+0.8%的无上限游戏返水将会在每周结算日后72小时内自动存入合资格会员的账户内。
+              </ion-col>
+              <ion-col col-12  no-padding>
+                      
+                本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。 
+              </ion-col> 
+              <ion-col col-12 no-padding>
+                
+                此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                
+                如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                 
+                
+                我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+              </ion-col>
+              <ion-col col-12 no-padding>
+               
+                我司保留对本优惠的最终解悉权。
+              </ion-col>
+            </ion-row>
+      </div>
+      <!-- 2 -->
+      <div [hidden]="page[2]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;">
+              <ion-col col-12   >
+                      老虎机 额外返水 +50%<br>
+                      由2017/09/01(五) 00:00起，不设有限日期。当周有效流水金额达到要求条件，即可获额外加送返水！
+              </ion-col>
+
+            
+
+              <ion-col col-12  >
+                      1. 活动时间：由2017/09/01(五)00:00起，不设有结束日期。<br>
+                      2. 活动规则：所有老虎机均可参加此活动。<br>
+                      3. 活动内容：活动期间，当周有效流水金额达到要求条件，即可获额外加送返水！<br> 
+               </ion-col>
+
+               <ion-col col-12  >
+                      当周有效流水金额累计达到<br>
+                      888,888元或以上，返水加送50%<br>
+                      500,000元或以上，返水加送35%<br>
+                      300,000元或以上，返水加送25%<br>
+                      200,000元或以上，返水加送15%<br>
+                      100,000元或以上，返水加送10%<br>
+               </ion-col>
+
+               <ion-col col-12  >
+                      4. 原有返水及加送返水将一併存入玩家帐号内，并列示在交易记录上。<br>
+                      5. 所得奖金只需在老虎机1倍流水投注即可提款。<br>
+                      6. 沙龙会官方保留随时变更活动办法，以及暂停、延长、提前终止本活动之权利，并将於公司官方网站上公告。<br>
+                      7. 若以任何违反诚信原则之方法取得资格者，该所获得之活动资格及回馈，本公司将逕予以取消，并不另行通知。<br>
+                   
+               </ion-col>
+
+
+
+              </ion-row>
+      </div>
+      <!-- 3 -->
+      <div [hidden]="page[3]">
+        <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+            <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                角子老虎 超高反水 不设上限                
+            </ion-col>
+            <ion-col col-12 no-padding>
+                会员于指定的角子老虎中进行游戏，即可享有1%无上限返水优惠。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                本活动计算范围是每周一00:00至周日的23:59分于角子老虎中的累计投注额。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                        所有合资格者将会以周结形式获赠上述的1%无上限返水优惠。<br>
+                        例如：周结总投注额＝200，000<br>
+                        1%游戏返水 = 200,000 * 1% = 2,000<br>
+            </ion-col>
+            <ion-col col-12 no-padding>
+                1%的无上限游戏返水将会在每周结算日后72小时内自动存入合资格会员的账户内。
+            </ion-col> 
+            <ion-col col-12 no-padding>
+                本优惠活动不计算《所有电子游戏》“牌桌游戏”和“累积彩池”内的所有游戏投注额。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+            </ion-col>
+            <ion-col col-12 no-padding>
+                我司保留对本优惠的最终解释权。
+            </ion-col>
+
+          </ion-row>
+    </div>
+      <!-- 4 -->
+      <div [hidden]="page[4]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+              <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                  老虎机 得分王奖金 8888元
+              </ion-col>
+              <ion-col col-12 style="padding-left: 0px;">
+                  活動時間：由即日起至2017/10/01(日)00:00前有效。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  活動規則：在任意一款老虎機游戲中『單次最高奖金』符合要求，即可參加此活動并獲得相應獎金！
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  單次奖金越高可獲得的獎金越高！
+              </ion-col>
+              <ion-col col-12  no-padding>
+                  活動獎金：
+              </ion-col> 
+              <ion-col col-12 no-padding>
+                  <table border="0" cellpadding="1" cellspacing="1" >
+                      <tbody><tr>
+                          <td width="200" height="28" align="center" >
+                              單次獎金
+                          </td>
+                          <td align="center" width="200">
+                              可獲得獎勵
+                          </td>
+                           <td align="center" width="200">
+                              有效流水
+                          </td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >
+                              888含以上
+                          </td>
+                          <td class="lr-5" align="center">
+                            30元
+                          </td>
+                            <td  class="lr-5" align="center">
+                           1倍
+                          </td>
+                         
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">
+                             1,200含以上
+                          </td>
+                          <td  class="lr-5" align="center">
+                            50元
+                          </td>
+                         
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">2,000含以上</td>
+                          <td class="lr-5" align="center">80元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >3,000含以上</td>
+                          <td class="lr-5" align="center">150元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >6,000含以上</td>
+                          <td  class="lr-5" align="center">300元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >8,000含以上</td>
+                          <td  class="lr-5" align="center">500元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >9,000含以上</td>
+                          <td  class="lr-5" align="center">600元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">10,000含以上</td>
+                          <td  class="lr-5" align="center">800元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">13,000含以上</td>
+                          <td class="lr-5" align="center">1000元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >18,000含以上</td>
+                          <td class="lr-5" align="center">1300元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">25,000含以上</td>
+                          <td class="lr-5" align="center">1600元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center">38,000含以上</td>
+                          <td class="lr-5" align="center">2000元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >50,000含以上</td>
+                          <td class="lr-5" align="center">3500元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >80,000含以上</td>
+                          <td  class="lr-5" align="center">5000元</td>
+                      </tr>
+                      <tr>
+                          <td height="28" align="center" >100,000含以上</td>
+                          <td class="lr-5" align="center">8888元</td>
+                      </tr>
+                 </tbody>
+                </table>
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  
+                  本活動范圍將於每天00:00至24:00計算各老虎機單次押注所拉出的最高彩金金額進行獎勵，符合之會員請於24小時內通過“馬上辦理”按鈕提出申請。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                 
+                  獎金需要在老虎機游戲內達到“1倍流水”方可申請提款。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                     
+                  沙龍會官方將會保留隨時變更活動，以及暫停、延長、提前終止本活動之權利，并將會在本司官方網站上公告。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                 
+                  若以任何違反誠信原則之方法取得資格者，該所獲得之活動資格及回饋，本公司將逕予以取消，并不另行通知。
+              </ion-col>
+            </ion-row>
+      </div>
+      <!-- 6 -->
+      <div [hidden]="page[6]">
+          <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+              <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                电投百家乐 1.8%高额码佣
+                
+              </ion-col>
+              <ion-col col-12 style="padding-left: 0px;">
+               
+                会员于电投百家乐进行投注，即可享1.8% 无上限高额码佣。
+                
+              </ion-col>
+              <ion-col col-12 no-padding>
+                       
+                活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                   
+                本活动计算范围是每月一号中午12:00到次月一号中午11:59于电投百家乐内的转码量。
+              </ion-col>
+              <ion-col col-12  no-padding>
+                
+                        计算方式是会员于电投百家乐中累计转码量的1.8%。<br>
+                        例如：月结转码量 = 500,000元<br>
+                        1.8%高额码佣= 500,000 x 1.8% = 9,000元
+              </ion-col> 
+              <ion-col col-12 no-padding>
+                        
+                1.8% 的码佣优惠将会在每月结算日后24小时内自动存入合资格会员的帐户内。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  
+                此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                  
+                本活动计算的为有效投注额，同时投注“庄家”, ”闲家”, 投注时开”和”局,皆不计算入有效投注额。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                      
+                本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+              </ion-col>
+              <ion-col col-12 no-padding>
+                如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+              </ion-col>
+              <ion-col col-12 no-padding>
+  
+                我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+              </ion-col>
+              <ion-col col-12 no-padding>      
+                我司保留对本优惠的最终解悉权。
+                </ion-col>
+            </ion-row>
+      </div>
+      <!-- 7 -->
+      <div [hidden]="page[7]">
+            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                        娱乐场 首存最高 ￥36,666
+                </ion-col>
+                <ion-col col-12 style="padding-left: 0px;">
+                        凡成功注册的新会员首次存款（包括之前注册未存款的会员）至真人娱乐场并达到366 元或者以上，即可享有「36%首存奖金」高达 36,666元。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        符合条件之会员必须要在未经任何投注前，透过我们的「客服中心」申请您的首存奖金。
+                </ion-col>
+                <ion-col col-12  no-padding>
+                        当领取优惠后有效投注总额达到 (首存金额+ 36%奖金) 的18倍，即可申请取款。
+                </ion-col> 
+                <ion-col col-12 no-padding>
+                   
+                        每位玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑只可享受一次本优惠。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                    
+                        如果会员在60日内未达到该优惠投注额要求，有效期过后，所有未使用的奖金将被收回。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        如领取奖金后需要取消，必须于投注前通知客服，经过任何方式投注后，所有奖金及投注流水限制均不能取消。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        本活动仅限于「沙龙馆SA平台」内进行。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        本活动计算的为有效投注额，无风险投注皆不计算入有效投注额。无风险投注包括（在百家乐中同时投注“庄家”, ”闲家”, 投注时开”和”局，轮盘同时投注”黑色”, ”红色”，”单”, ”双”, ”大”, ”小”）。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        未达投注额要求期间不能进行存取款及户内转帐，当玩家结束该活动之后，再次存款后投注只需达本金的1倍即可取款。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        如申请本回赠优惠，将不可与返水优惠共享。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        我司保留对本优惠的最终解悉权。
+                </ion-col>
+              </ion-row>
+      </div>
+      <!-- 8 -->
+      <div [hidden]="page[8]">
+            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                        娱乐场 幸运码 月月送
+                </ion-col>
+                <ion-col col-12 style="padding-left: 0px;">
+                        每月在真人娱乐场的有效投注总额达一千万者，即可额外获得一万元免费筹码。每位会员每月最高可获港币十万元。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        本活动计算范围是每月第一天中午12:00到次月第一天中午11:59于真人娱乐场的有效投注额。
+                </ion-col>
+                <ion-col col-12  no-padding>
+                        符合条件之会员必须于当月内透过 「客服中心」提出申请。否则当自动弃权论，不得异议。
+                </ion-col> 
+                <ion-col col-12 no-padding>
+                
+                        在当月内申请并且符合获取此优惠资格的玩家，将会在次月的第一天后72小时内发放到您的会员帐号里。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                    
+                        本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        本活动仅限于计算「SALON平台」内的有效投注额。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        本活动计算的为有效投注额，无风险投注皆不计算入有效投注额。无风险投注包括（在百家乐中同时投注“庄家”, ”闲家”, 投注时开”和”局，轮盘同时投注”黑色”, ”红色”，”单”, ”双”, ”大”, ”小”）。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                </ion-col>
+                <ion-col col-12 no-padding>
+                        我司保留对本优惠的最终解释权。
+                </ion-col>
+            </ion-row>
+        </div>
+    
+    
+        <!-- 9 -->
+        <div [hidden]="page[9]">
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                        娱乐场 无限返水
+                        
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                        真人娱乐场每周0.6% 无上限返水回馈！投注越多，回报越多！
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        每周返水优惠的计算范围是每周一中午12:00至次周一的中午11:59所有真人娱乐场的投注。
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                        每周返水将在每周一中午12:00审核后,并于週三23:59之前将相应的返水发放到您的帐号里。
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                        本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        本活动计算的为有效投注额，无风险投注皆不计算入有效投注额。无风险投注包括（在百家乐中同时投注“庄家”, ”闲家”, 投注时开”和”局，轮盘同时投注”黑色”, ”红色”，”单”, ”双”, ”大”, ”小”）。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        我司保留对本优惠的最终解释权。
+                    </ion-col>
+                </ion-row>
+          </div>
+          <!-- 11 -->
+          <div [hidden]="page[11]">
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                            娱乐场 - 发888 奖888
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                            即日起至2017/10/01(日)00:00前有效，活动期间，在娱乐场SA“沙龙馆” 所有百家乐游戏桌台，同一牌局内所发牌中同时 出现三张“8”。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            活动时间：即日起至2017/10/01(日)00:00前有效。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            活动内容：活动期间，在娱乐场SA“沙龙馆”所有百家乐游戏桌台，同一牌局内所发牌中同时出现三张“8”时，当局所有参与有效投注88元和888元或以上的会员不计输赢，即可获得相应奖金！
+                            <br><br>
+                            <table style="width: 100%;" border="0" cellpadding="1" cellspacing="1"  >
+                                    <tbody><tr>
+                                      <td width="200" height="28" align="center" bgcolor="#222222">投注金额（元）</td>
+                                      <td align="center" bgcolor="#222222" width="200">同一牌局内出现</td>
+                                      <td align="center" bgcolor="#222222" width="200">额外奖金（元）</td>
+                                      <td align="center" bgcolor="#222222" width="200">流水倍数</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="28" align="center"  >88元或以上</td>
+                                      <td height="28" align="center"  >三张“8”</td>
+                                      <td height="28" align="center"  >88</td>
+                                      <td height="28" align="center"  >1倍</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="28" align="center"  >888元或以上</td>
+                                      <td height="28" align="center"  >三张“8”</td>
+                                      <td height="28" align="center"  >888</td>
+                                      <td height="28" align="center"  >1倍</td>
+                                    </tr>
+                                </tbody></table>
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                            本活动只计算娱乐场SA“沙龙馆”所有百家乐游戏桌台；如出现三张的“8”，当局内凡有效投注的客户均会获得相应的额外奖金。
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                            符合之会员请于24小时内通过“马上办理”按钮提出申请。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            活动期间，本次额外红利仅限于百家乐牌局中出现胜负的牌局，即“庄”赢或“閒”赢；当局结果为“和”局而返回本金的投注，不计算在本次优惠活动之内。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            所获奖金需要在SA“沙龙馆”完成1倍流水即可申请提款，本活动可同时享受其他优惠活动，申请不限次数。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            沙龙会官方保留随时变更活动办法，以及暂停、延长、提前终止本活动之权利，并将于公司官方网站上公告。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            若以任何违反诚信原则之方法取得资格者，该所获得之活动资格及回馈，本公司将迳予以取消，并不另行通知。
+                    </ion-col>
+                </ion-row>
+          </div>
+          <!-- 12 -->
+          <div [hidden]="page[12]">
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                            体育博彩 足球返水不封顶
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                            足球投注0.4%返水！返水优惠金额无上限！
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            活动从北京时间2014年2月24日12：00PM开始，不设有限日期。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            体育博彩返水的计算范围是每周一00:00至周日23:59所有体育博彩的有效投注。
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                            每周返水将在每周一中午进行审核，审核完毕后12小时内相应的返水将会派送到玩家账户。
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                            本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            本活动计算的为有效投注额，有效投注额将只对产生输赢结果的注单进行投注额计算，注单取消或本金退还，将不计算。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            我司保留对本优惠的最终解释权。
+                    </ion-col>
+                </ion-row>
+          </div>
+          <!-- 13 -->
+          <div [hidden]="page[13]">
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                        捕鱼游戏 不封顶返水 0.8%
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                        
+                        会员于捕鱼中进行游戏，即可享有0.8%无上限返水优惠。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        
+                        活动从北京时间2017年07月01日12:00PM正式开始, 不设有限日期。 <br>
+                        本活动计算范围是每周一00:00至周日23:59于捕鱼中的累计投注额。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                        
+                        所有合资格者将会以周结形式获赠上述的0.8%无上限返水优惠。<br>
+                        
+                        例如：周结总投注额＝200，000 <br>
+                        
+                        0.8%游戏返水 = 200,000 x 0.8% = 1,600 <br>
+                        
+                        0.8%的无上限游戏返水将会在每周结算日后72小时内自动存入合资格会员的账户内。
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                        
+                        本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。 
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                                此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+
+                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                                我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+
+                        我司保留对本优惠的最终解悉权。
+                    </ion-col>
+                  </ion-row>
+            </div>
+        
+        
+        
+        
+       
+            <!-- 14 -->
+        
+            <div [hidden]="page[14]">
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <!--
+                    <ion-col col-12>
+                            <table style="width: 100%;" border="0" cellpadding="1" cellspacing="1" >
+                                <thead class="vip">
+                                        <tr>                                        
+                                                <th style="color:#e0a422;float:left;">貴賓禮遇</th>
+                                                <th><img src="./assets/promotion/vip/redcard.png" width="50%" alt=""></th>
+                                                <th><img src="./assets/promotion/vip/purplecard.png" width="50%"> </th>
+                                        </tr>
+                                </thead>
+                                <tbody class="vip" style="text-align: center;">
+                                        <tr>
+                                                <td>每周《真人赌场》现金返还</td>
+                                                <td>50%</td>
+                                                <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>每周《老虎机》现金返还</td>
+                                                <td>50%</td>
+                                                <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>每周《电子游戏》现金返还</td>
+                                                <td>50%</td>
+                                                <td>100%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>每月《真人赌场》负赢利返还</td>
+                                                <td>3%</td>
+                                                <td>6%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>每月《老虎机》负赢利返还</td>
+                                                <td>4%</td>
+                                                <td>7%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>每月《电子游戏》负赢利返还</td>
+                                                <td>5%</td>
+                                                <td>8%</td>
+                                        </tr>
+                                        <tr>
+                                                <td>生日特殊奖励</td>
+                                                <td><img src="./assets/promotion/vip/bullet.png" width="30%" alt=""></td>
+                                                <td><img src="./assets/promotion/vip/bullet.png" width="30%" alt=""></td>
+                                        </tr>
+                                        <tr>
+                                                <td>每月免费老虎机旋转</td>
+                                                <td><img src="./assets/promotion/vip/bullet.png" width="30%" alt=""></td>
+                                                <td><img src="./assets/promotion/vip/bullet.png" width="30%" alt=""></td>
+                                        </tr>
+                                        <tr>
+                                                <td>节日免费老虎机旋转游戏</td>
+                                                <td><img src="./assets/p        romotion/vip/bullet.png" width="30%" alt=""></td>
+                                                <td><img src="./assets/promotion/vip/bullet.png" width="30%" alt=""></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                    </ion-col>
+
+                    <ion-col col-12>
+                                <table class="vip" style="width: 100%;" border="0" cellpadding="1" cellspacing="1" >
+                                    <thead  class="vip">
+                                            <tr style="color:#e0a422;float:left;">                                        
+                                                    <th>貴賓服务</th>
+                                                    <th></th>
+                                                    <th></th>
+                                            </tr>
+                                    </thead>
+                                    <tbody  class="vip" style="text-align: center;">
+                                            <tr>
+                                                    <td>全國高鐵票，動車票，火車票預訂</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>全球酒店預訂服務</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>電影票預定服務</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>餐廳預約、美食上門</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>鮮花、蛋糕預訂及配送</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>奢侈品全球採購服務</td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                                    <td><img src="./assets/promotion/vip/bullet.png" width="60%" alt=""></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                        </ion-col>
+                -->
+
+                    
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                            优惠 - 特式优惠
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                            活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            如何成为升级玩家？ 
+                            <table style="width: 100%;" border="0" cellpadding="1" cellspacing="1"  >
+                                    <tbody>
+                                      <tr>
+                                        <td width="200" height="28" align="center" bgcolor="#222222">玩家级别</td>
+                                        <td align="center" bgcolor="#222222" width="200">最近90天内总投注额</td>
+                                        <td align="center" bgcolor="#222222" width="200">现金奖励</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <td height="28" align="center"  >高级</td>
+                                        <td height="28" align="center"  >150万</td>
+                                        <td height="28" align="center"  >688元</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <td height="28" align="center"  >星级</td>
+                                        <td height="28" align="center"  >300万</td>
+                                        <td height="28" align="center"  >1888元</td>
+                                      </tr>
+         <tr>
+                                        <td height="28" align="center"  >超级</td>
+                                        <td height="28" align="center"  > 600万</td>
+                                        <td height="28" align="center"  > 3888元</td>
+                                      </tr>
+         <tr>
+                                        <td height="28" align="center"  >特级</td>
+                                        <td height="28" align="center"  >1200万</td>
+                                        <td height="28" align="center"  >8888元</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            晋升后额外返水：
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                            <table style="width: 100%;" border="0" cellpadding="1" cellspacing="1"  >
+                                    <tbody>
+                                      <tr>
+                                        <td width="200" height="28" align="center" bgcolor="#222222">玩家级别 </td>
+                                        <td align="center" bgcolor="#222222" width="200">每月额外返水</td>
+                                        <td align="center" bgcolor="#222222" width="200">申请条件</td>
+                                        <td align="center" bgcolor="#222222" width="200">封顶上限</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="28" align="center"  >高级</td>
+                                        <td height="28" align="center"  >0.1%</td>
+                                        <td height="28" align="center"  >总投注额25万</td>
+                                        <td height="28" align="center"  >15000元</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="28" align="center"  >星级</td>
+                                        <td height="28" align="center"  > 0.2%</td>
+                                        <td height="28" align="center"  >总投注额50万</td>
+                                        <td height="28" align="center"  >30000元</td>
+                                      </tr>
+                                       <tr>
+                                       <td height="28" align="center"  >超级</td>
+                                        <td height="28" align="center"  >0.3%</td>
+                                        <td height="28" align="center"  >总投注额100万</td>
+                                        <td height="28" align="center"  >60000元</td>
+                                      </tr>
+                                       <tr>
+                                        <td height="28" align="center"  >特级</td>
+                                        <td height="28" align="center"  >0.4%</td>
+                                        <td height="28" align="center"  >总投注额200万</td>
+                                        <td height="28" align="center"  >无封顶上限</td>
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td height="28" colspan="4" align="center"  >每月1日12:00至次月1日11:59 </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                            请达标的会员通过“马上办理”按钮提出晋升申请。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            会员每月只能提交一次晋升申请。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            晋升后不能再申请比当前等级低的级别，可继续晋升比当前等级高或更高的级别，直至到最高等级为止。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            晋升后如需要继续晋升更高级别，则晋升后计算由申请日前最近90天内（不计算已领取额外返水的月份）总累计的投注额。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            本活动计算的为有效投注额，无风险投注皆不计算入有效投注额。无风险投注包括（在百家乐中同时投注“庄家”, ”闲家”, 投注时开”和”局，轮盘同时投注”黑色”, ”红色”，”单
+                            ”, ”双”, ”大”, ”小”）。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            “每月额外返水”以当月娱乐场有效投注流水计算；若当月符合条件之会员必须于当月内透过“马上办理”按钮提出申请，否则当自动弃权论，不得异议。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            在当月内申请并且符合获取额外返水的会员，将会在次月的第一天后72小时内发放到您的会员账号里。 
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            本活动仅限于计算「SALON平台」内的有效投注额。 
+                    </ion-col>
+                
+                  </ion-row>
+            </div>
+        
+        
+        
+        <!-- 15 -->
+        
+        <div [hidden]="page[15]">
+    
+                <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                    <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                            特式优惠 承诺提款 1小时到账
+                    </ion-col>
+                    <ion-col col-12 style="padding-left: 0px;">
+                            本活动从北京时间2013年03月18号正式开始，不设有限日期。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            30万或以内之提款申请，只要出现1小时内还未成功到账，用户将可获得相应的"超时赔付金"。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            目前支援1小时快速到帐服务的银行：中国农业银行、中国工商银行、中国建设银行（不包括第三方“乐付”取款功能）。
+                    </ion-col>
+                    <ion-col col-12  no-padding>
+                            申请赔付金之会员请于2小时内透过「客服中心」提出申请，否则当自动弃权论，不得异议。
+                    </ion-col> 
+                    <ion-col col-12 no-padding>
+                            赔付申请审核将於2小时内完成，相应的"超时赔付金"，每超过15分钟100元，将派送到会员账户。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            具体时间点的计算标准，当以本站实际数据的时间为准。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            获得的"超时赔付金"可自由投注和提款不受投注限制。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            若是由于会员自身原因或第三方原因导致的延误，将无法获得赔付金。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            如会员提出取消取款请求，则无法获得相应的赔付金。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            收款人填写信息有误，包括账户名称、账号、开户行有任何一处出现错误，而导致的延误，将无法获得相应的赔付。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                    </ion-col>
+                    <ion-col col-12 no-padding>
+                            我司保留对本优惠的最终解释权。
+                    </ion-col>
+                </ion-row>
+        </div>
+        <!-- 16 -->
+        <div [hidden]="page[16]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        特式优惠 存款奖金 无上限
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        存款到公司指定银行帐户即可享受1%汇款回赠。不限次不限额，每次存每次送!
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        此回赠优惠不设投注流水倍数，取款时只需按照正常取款规则办理。
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        此回赠优惠不用申请，回赠将于存款核实后自动发放。
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        所有透過戶內轉帳的資金一律不計算在內。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        如有需要，我司有权要求客户出示汇款证明。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留对本优惠的最终解释权。
+                                </ion-col>
+                            </ion-row>
+        </div>
+        <!-- 17 -->
+        <div [hidden]="page[17]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        全勤奖金3888元
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        即日起至2017/10/01(日)00:00前有效，连续7天或以上连续存款并达到相对应有效流水，即可领取高达3888元全勤奖金。
+                                        <br>
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        1. 活动时间：由现在起至2017/10/01(日)00:00前有效。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        2. 活动规则：
+                                        <br>
+                                        <table style="width: 100%;" border="0" cellpadding="1" cellspacing="1"  >
+                                                <tbody><tr>
+                                                  <td width="200" height="28" align="center" bgcolor="#222222">有效流水</td>
+                                                  <td width="200" height="28" align="center" bgcolor="#222222">月存款天</td>
+                                                  <td width="200" height="28" align="center" bgcolor="#222222">可获彩金</td>
+                                                  <td width="200" height="28" align="center" bgcolor="#222222">流水倍数</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >5万~20万 </td>
+                                                  <td height="28" align="center"  >7天或以上 </td>
+                                                  <td height="28" align="center"  >88元</td>
+                                                  <td height="28" align="center"  >1倍</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >20万~50万</td>
+                                                  <td height="28" align="center"  >7天或以上</td>
+                                                  <td height="28" align="center"  >188元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >50万~100万</td>
+                                                  <td height="28" align="center"  >7天或以上</td>
+                                                  <td height="28" align="center"  >288元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >100万~300万</td>
+                                                  <td height="28" align="center"  >7天或以上</td>
+                                                  <td height="28" align="center"  >588元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >300万~500万</td>
+                                                  <td height="28" align="center"  >14天或以上</td>
+                                                  <td height="28" align="center"  >888元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>
+                                                <tr>
+                                                  <td height="28" align="center"  >500万~888万</td>
+                                                  <td height="28" align="center"  >30天或以上</td>
+                                                  <td height="28" align="center"  >1,888元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>             
+                                                 <tr>
+                                                  <td height="28" align="center"  >888万或以上 </td>
+                                                  <td height="28" align="center"  >30天或以上</td>
+                                                  <td height="28" align="center"  >3,888元</td>
+                                                  <td height="28" align="center"  >2倍</td>
+                                                </tr>
+                                            </tbody></table>
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        3. 注明：本活动月有效流水计算方式为：当月有效流水 = 所有游戏当月有效流水总和。
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        4. 本活动可以与其它活动同时共享，只要您达到活动要求，即可申请最高可达 3,888元 的全勤奖金。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        5. 本活动所获全勤奖金必须經過流水后才能申请提款。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        6. 每月1号所有达标会员均可申請 “全勤奖金” 领取上月獎金，符合之会员请于72小时内通过“马上办理”按钮提出申请。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        7. 每账户每月只允许领取一次“全勤奖金” 。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        8. 沙龙会官方保留随时变更活动办法，以及暂停、延长、提前终止本活动之权利，并将於公司官方网站上公告。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        9. 若以任何违反诚信原则之方法取得资格者，该所获得之活动资格及回馈，本公司将逕予以取消，并不另行通知。
+                                </ion-col>
+                            </ion-row>
+        </div>
+        <!-- 18 -->
+        <div [hidden]="page[18]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        赢家分享 送88元红包
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        由现在起至2017/10/01(日)00:00前 有效活动对像：任何游戏内的任何项目，只要是由单局单注所赢取的纪录，均可参与此活动
+                                        <br>
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动时间：即日起至2017/10/01(日)00:00前有效。 
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动对像：任何游戏内的任何项目，只要是由单局单注所赢取的纪录，均可参与此活动。 
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        活动内容：<br>
+                                            分享三条赢得38元或以上的注单记录，立即奖励8.8元红包，无需经过流水 ;<br>
+                                            分享五条赢得888元或以上的注单记录，立即奖励88元红包，需要经过1倍流水;
+                                        <br> 
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        请在赢取得分后的24小时内，向大家发帖分享喜讯！只需将该游戏得分纪录的截图，发佈到我们的官方论坛（www.s36bbs.com)上，同时简单的描述一下心情或短说，只要一经核对，立即奖励现金红包。 
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        请将发布成功后的主题帖子链接，通过“马上办理”按钮提交审核。 
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        每个帐号每天最多可以领取三次奖励。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        沙龙会官方将会保留随时变更活动，以及暂停、延长、提前终止本活动之权利，并将会在本司官方网站上公告。 
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        若以任何违反诚信原则之方法取得资格者，该所获得之活动资格及回馈，本公司将迳予以取消，并不另行通知。
+                                </ion-col>
+                            </ion-row>
+        </div>
+        <!-- 10 -->
+        <div [hidden]="page[10]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        娱乐场 连胜奖翻天
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        百家乐连赢奖不停！连赢越多，奖金越高。最高奖8,888元！
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动从北京时间2012年01月16日12:00PM正式开始, 不设有限日期。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        符合之会员请于取得连赢局数后24小时内发送邮件至promo@saloncs.com申请。
+                                        <table align="center">
+                                                <tbody><tr>
+                                                    <td>连赢局数</td>
+                                                    <td>奖励</td>
+                                                    <td>每局最低投注</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>88</td>
+                                                    <td>50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>188</td>
+                                                    <td>100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>388</td>
+                                                    <td>200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>888</td>
+                                                    <td>300</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>1688</td>
+                                                    <td>500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>3888</td>
+                                                    <td>700</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12</td>
+                                                    <td>8888</td>
+                                                    <td>1000</td>
+                                                </tr>
+                                            </tbody></table>
+                                            <p>
+                                                    邮件主题请注明：连赢奖金申请<br>
+                                                    会员帐号：<br>
+                                                    投注编号：<br>
+                                                    日期时间：<br>
+                                                </p>
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        连赢奖金将会于会员申请后24小时内自动存入合资格会员的帐户内。
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        会员之连赢局数不需要连续的牌局号码，但必需是会员由第一手投注起计24小时内的连续投注。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        计算连赢的局数当中，若出现和局，以下一局继续计算。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        计算连赢的局数中，只限“庄或闲”，“龙或虎”，大或小。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        本活动仅限于「SALON平台」内进行（首存优惠同时享受此优惠申请）。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留对本优惠的最终解释权。
+                                </ion-col>
+                            </ion-row>
+        </div>
+        <!-- 19 -->
+        <div [hidden]="page[19]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        投注马竞 多送20%
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        活动适用于2017-2018年度西班牙甲组联赛，马德里竞技所有主场及客场的赛事。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动适用于IM体育平台及沙龙体育平台的玩家。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        下注马德里竞技“主场主胜”或“客场客胜”，一旦中奖便可获额外奖金20%，最高3000元。
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        20%奖金计算范例 :<br>
+                                                假设一：本金RMB.1000 投注马德里竞技主场主胜，马德里竞技赢，赔率1.00 (赔率为十足)<br>
+                                                额外奖金 : RMB.1000(不含本金) x 20% = &nbsp;200元（奖金最高3000元）<br>
+                                                会员于派彩结束后24小时内，通过“办理按钮”提出申请。<br>
+                                                        审核完毕后24小时内派送到玩家账户内。
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        本活动只适用于马德里竞技赛事“1x2胜平负”的投注玩法。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        本优惠活动奖金可与其他优惠同时享有，可自由投注和提款不受投注限制。 
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        本活动计算的为有效派彩金额，不计算本金。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留对本优惠的最终解悉权。
+                                </ion-col>
+                            </ion-row>
+        </div>
+        <!-- 20 -->
+        <div [hidden]="page[20]">
+                
+                            <ion-row style="color:rgb(161, 161, 161);padding-left:0px;" >
+                                <ion-col col-12 style="font-size:23px;color: #e0a422;padding-left: 0px;"> 
+                                        投注欧冠联赛 畅游欧洲七国
+                                </ion-col>
+                                <ion-col col-12 style="padding-left: 0px;">
+                                        会员于2017/2018欧洲冠军联赛中投注累计达到100万，即可免费畅游欧洲七国（捷克、奥地利、德国、意大利、法国、瑞士和匈牙利）。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        活动时间从2017年09月12日正式开始，至2018年5月26日欧冠联赛结束。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        本活动计算范围是2017/2018欧洲冠军联赛赛季中，在“体育投注”里投注欧冠赛事累计的总投注额。
+                                </ion-col>
+                                <ion-col col-12  no-padding>
+                                        符合资格者请于活动结束后72小时内透过 "办理按钮" 进行申请。
+                                </ion-col> 
+                                <ion-col col-12 no-padding>
+                                        本优惠活动可与其他优惠同时享有，不受投注限制。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        此优惠活动只适用于同一玩家、同一联络资料﹑同一借记卡/信用卡﹑同一IP地址及同一台电脑参加。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        如有任何个人或团体利用不诚实的手法获取优惠，我司有权永远冻结所有相关帐号及所有资金且不另行通知。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留在没有任何通知下，随时终止，取消，更改或者撤销所有获奖优惠的权利。
+                                </ion-col>
+                                <ion-col col-12 no-padding>
+                                        我司保留对本优惠的最终解悉权。
+                                </ion-col>
+                            </ion-row>
+        </div>    
+    
+    
+    
+     
+      </div>
+     
+
+    </div>
+
+
+<page-footer [content]="c"></page-footer>
+
+
+
+
+</ion-content>
+
+<ion-footer>
+    <page-tabs2></page-tabs2>
+  </ion-footer>
+                

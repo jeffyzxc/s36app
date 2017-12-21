@@ -1,0 +1,44 @@
+<ion-navbar color=dark> 
+
+
+
+
+  <ion-title class="banner-title" *ngIf="!canGoback" style="color:white;font-size: 1em;">
+      <img class="banner" height="22" src="./assets/header/banner.png">
+
+  </ion-title>
+
+  <ion-title *ngIf="canGoback" style="color:white;font-size: 1em;">
+      <div style="color:white !important;font-size:23.2px !important;" > {{ titleText }}</div>
+  </ion-title>
+  
+  <ion-buttons *ngIf="!canGoback" end>
+      <button (click)="navigateHelpPage()" ion-button icon-only>
+          <ion-icon style="font-size: 30px;margin-top: 1px;" name="appname-helpnav"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons *ngIf="!canGoback" end>
+      <button  (click)="contactCostumerService()" ion-button icon-only>    
+                     <ion-icon style="font-size:30px;margin-top: 1px;" name="appname-cs"></ion-icon>
+      </button>
+    </ion-buttons>
+  
+    <ion-buttons *ngIf="canGoback" end>
+      <button style="margin-top: 1px;" (click)="navigateHomePage()" *ngIf="canGoback" ion-button icon-only >
+              <ion-icon style="font-size: 23px !important;" name="appname-home1"></ion-icon>
+      </button>
+    </ion-buttons>
+
+      <ion-buttons *ngIf="canGoback" end>
+          <button  (click)="navigateHelpPage()" ion-button icon-only>
+              <ion-icon style="font-size:30px;margin-top: 1px;" name="appname-helpnav"></ion-icon>
+          </button>
+      </ion-buttons>
+
+   <ion-buttons *ngIf="canGoback" end>
+      <button  (click)="contactCostumerService()" ion-button icon-only>    
+                     <ion-icon style="font-size:30px;margin-top: 1px;" name="appname-cs"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>

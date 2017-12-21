@@ -1,0 +1,61 @@
+<ion-header>
+    <page-navbar [titleText]="header">
+      </page-navbar>    
+</ion-header>
+
+
+              
+<ion-content  [fullscreen]="true" class="black-background" #c>
+        
+                <page-header></page-header>
+
+                
+  <ion-searchbar style="padding: 16px;padding-bottom: 0px;" (ionInput)="filterItems($event)"></ion-searchbar>
+                
+  <ion-grid align="center" align="center" padding-top style="padding-bottom:26px">
+    
+      <ion-row class="menu-row">
+          <!--
+              <ion-col col-4 *ngFor="let list of gameListCollection">  
+                  <img src="./assets/slot games/games/{{ gameCategory }}/{{ list.image }}.jpg"/>
+                  
+                  <div>
+                      <img src="./assets/imgs/egame_info.png" width="15%" alt="" style="float:left; margin-left: 5px;" >
+                      <span style="color:white;" >{{ list.title }}</span>
+                  </div>
+                
+                <div class="slotgame-label">丛林鹦鹉</div>
+
+              </ion-col>
+            -->
+
+            <ion-col col-4 *ngFor="let list of gameListCollection">
+                <div (click)="externalLink(list.link)" class="card">
+                        <img src="./assets/slot games/games/{{ gameCategory }}/{{ list.image }}.jpg"/>
+                        <div style="display:flex;
+                        align-items:center;">
+                       
+                        <!--
+                        <img  src="./assets/imgs/egame_info.png" width="20px">
+                        -->
+                        <div style="display: inline-block;
+                        width: 100%;">
+                            <span class="card-title">{{ list.title }}</span>
+                        </div>
+                        
+                        </div>
+                </div>
+
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <page-footer [content]="c"></page-footer>
+
+
+</ion-content>
+
+<ion-footer>
+    <page-tabs2></page-tabs2>
+  </ion-footer>
+                

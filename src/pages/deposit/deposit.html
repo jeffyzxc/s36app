@@ -1,0 +1,37 @@
+<ion-header>
+    <page-navbar [titleText]="'我要存款'">
+      </page-navbar>    
+</ion-header>
+
+  
+
+<ion-content  [fullscreen]="true" class="black-background"  style="text-align: center;" #c> 
+
+                <page-header></page-header>
+
+<div id="ds" style="padding-bottom:30px;">
+    <ion-row style="margin-top:30px">   
+       <ion-col>
+            <img src="./assets/deposit/btnatm.png" (click)="atmdepositterm()" >
+            <h5  style="color:white;">银行转帐 (无需网银)</h5>
+            <h6 class="one" style="color:white;">支持币种：人民币</h6>
+        </ion-col>
+    <ion-col>
+            <img src="./assets/deposit/btnalipay.png"  (click)="alipaydeposit()" >   
+            <h5  style="color:white;">支付宝 (新兴热门)</h5>
+            <h6 class="one" style="color:white;">支持币种：人民币</h6>
+        </ion-col>  
+    </ion-row>
+</div>
+
+
+<page-footer [content]="c"
+></page-footer>
+  </ion-content>
+
+ 
+  <ion-footer>
+    <page-tabs2></page-tabs2>
+  </ion-footer>
+                
+

@@ -1,0 +1,205 @@
+<ion-header>
+        <page-navbar [titleText]="'我的钱包'">
+          </page-navbar>    
+    </ion-header>
+
+  
+
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+ <page-header></page-header>
+
+
+
+  <div id="balance" >
+          <!--
+    <ion-row>
+        <ion-col text-left>
+                会员账号:
+        </ion-col>
+        <ion-col text-center>
+            <span class="yellow">csodamou</span>
+        </ion-col>
+        <ion-col col-2>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col text-left>
+                主账户余额:
+        </ion-col>
+        <ion-col text-center>
+            <span class="yellow">0.00</span>
+        </ion-col>
+        <ion-col col-2>
+                <span>刷新</span>
+        </ion-col>
+    </ion-row>
+-->
+    <ion-row>
+        <ion-col>
+                <button [navPush]="deposit" ion-button full color=gold class="text-black">我要存款</button>
+        </ion-col>
+        <ion-col>
+                <button [navPush]="withdraw" ion-button full color=gold class="text-black">我要提款</button>
+        </ion-col>
+    </ion-row>
+
+
+</div>
+<div style="padding:10px;    color: white;">
+        <div style="width: 100% !important;
+        padding: 1px;
+        position: relative;
+        left: -2px;
+        border: 2px solid transparent;
+        -o-border-image: linear-gradient(to right, #531faa 0%, #2275ae 50%, #25aa6c 100%);
+        border-image: -webkit-gradient(linear, left top, right top, from(#531faa), color-stop(50%, #2275ae), to(#25aa6c));
+        border-image: linear-gradient(to right, #531faa 0%, #2275ae 50%, #25aa6c 100%);
+        border-image-slice: 1;padding-bottom:26px;">
+
+        <ion-row>
+                <ion-col>
+                        <h2 style="" class="yellow" text-left>现场游戏余额</h2>
+                </ion-col>
+        </ion-row>
+
+          
+      
+            <ion-row>
+                <ion-col text-left>
+                      贵族馆余额:
+                </ion-col>
+                <ion-col text-right>
+                      <span class="yellow">0.00</span>
+                </ion-col>
+                <ion-col col-auto text-right>
+                        刷新
+                </ion-col>
+            </ion-row>
+                
+              
+                  <ion-row>
+                    <ion-col text-left>
+                          沙龙馆+沙龙坊余额:
+                    </ion-col>
+                    <ion-col text-right>
+                      <span class="yellow">0.00</span>
+                     </ion-col>
+                     <ion-col col-auto text-right>
+                        刷新
+                    </ion-col>
+                   </ion-row>
+                    
+                 
+            <ion-row>
+                <ion-col text-left>
+                      名人馆余额:
+                </ion-col>
+                <ion-col text-right>
+                  <span class="yellow">0.00</span>
+             </ion-col>
+             <ion-col col-auto text-right>
+                刷新
+        </ion-col>
+                </ion-row>
+                
+                <ion-row>
+                    <ion-col text-left>
+                          IM体育余额:
+                    </ion-col>
+                    <ion-col text-right>
+                      <span class="yellow">0.00</span>
+                 </ion-col>  
+                 <ion-col col-auto text-right>
+                        刷新
+                </ion-col>
+                    </ion-row>
+      
+                    <ion-row>
+                        <ion-col text-left>
+                          <h2 class="yellow">角子老虎余额</h2>
+                        </ion-col>
+                      </ion-row>
+                
+                      <ion-row>
+                          <ion-col text-left>
+                                  欧洲坊余额:
+                          </ion-col>
+                          <ion-col text-right>
+                              <span class="yellow">0.00</span>
+                       </ion-col>
+                       <ion-col col-auto text-right>
+                        刷新
+                </ion-col>
+                          </ion-row>
+                          
+                          <ion-row>
+                              <ion-col text-left>
+                                      南美坊余额:
+                              </ion-col>
+                              <ion-col text-right>
+                                  <span class="yellow">0.00</span>
+                           </ion-col>
+                           <ion-col col-auto text-right>
+                                刷新
+                        </ion-col>
+                              </ion-row>
+                              
+                           
+                      <ion-row>
+                          <ion-col text-left>
+                                  大洋坊余额:
+                          </ion-col>
+                          <ion-col text-right>
+                              <span class="yellow">0.00</span>
+                       </ion-col>
+                       <ion-col col-auto text-right>
+                        刷新
+                </ion-col>
+                          </ion-row>
+                          
+                          <ion-row>
+                              <ion-col text-left>
+                                      北极坊余额:
+                              </ion-col>
+                              <ion-col text-right>
+                                  <span class="yellow">0.00</span>
+                           </ion-col>  
+                           <ion-col col-auto text-right>
+                                刷新
+                        </ion-col>
+                              </ion-row>
+                              <ion-row>
+                                        <ion-col class="yellow" col-12 text-left>
+                                                <h2>彩票余额</h2>
+                                        </ion-col>
+                                        <ion-col col-6 text-left>
+                                            <span >VR彩票余额 :</span>
+                                        </ion-col>  
+                                        <ion-col col-6 text-right>
+                                                <span class="yellow">請先登入</span>
+                                        </ion-col>  
+                                </ion-row>
+
+
+        </div>
+
+</div>
+        
+      <!--
+        <div padding style="    padding-bottom: 24px;" >
+                <button (click)="home()"style="width:200px;"  class="text-black" color=gold ion-button icon-left>     
+                        返回首页
+                </button>
+        </div>
+-->
+
+            
+        <page-footer [content]="c">
+        </page-footer>
+</ion-content>
+
+
+<ion-footer>
+<page-tabs2 [activeBalance]="true"></page-tabs2>
+</ion-footer>
+        

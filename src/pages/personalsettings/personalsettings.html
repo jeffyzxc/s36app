@@ -1,0 +1,162 @@
+<ion-header>
+    <page-navbar [titleText]="'个人设置'">
+      </page-navbar>    
+</ion-header>
+
+
+  
+
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+                <page-header [settingsPage]="true"></page-header>
+
+    
+  <div id="all" style="padding-bottom:26px;">
+       <div id="ones" padding>
+        <div id="top">
+        <ion-col>
+          <p style="text-align:justify;" class="yellow">如须更改个人信息请联系我们，当核实无误后我们将会给您更新。</p>
+          <h3 style="text-align:justify;" class="yellow">个人信息 </h3> 
+        </ion-col>
+    </div>
+
+      <ion-row  >
+          <ion-col stlye="margin:auto;">
+                 <p>用户帐号:</p>
+          </ion-col>
+          <ion-col>
+              <p class="yellow">csuser</p>
+       </ion-col>
+          </ion-row>
+          
+        
+            <ion-row>
+              <ion-col>
+                     <p>用户姓名:</p>
+              </ion-col>
+              <ion-col>
+                  <p class="yellow">username</p>
+           </ion-col>
+              </ion-row>
+              
+           
+      <ion-row>
+          <ion-col>
+                 <p>性別:</p>
+          </ion-col>
+          <ion-col>
+              <p class="yellow">男</p>
+       </ion-col>
+          </ion-row>
+          
+          <ion-row>
+              <ion-col>
+                     <p>电话:</p>
+              </ion-col>
+              <ion-col>
+                  <p class="yellow">0933333740</p>
+           </ion-col>  
+              </ion-row>
+ 
+          
+                <ion-row>
+                    <ion-col>
+                           <p>会员等级:</p>
+                    </ion-col>
+                    <ion-col>
+                        <p class="yellow">普通会员</p>
+                 </ion-col>
+                    </ion-row>
+                    
+                    <ion-row>
+                        <ion-col>
+                               <p>电子邮件:</p>
+                        </ion-col>
+                        <ion-col>
+                            <p class="yellow">email@yahoo.com</p>
+                     </ion-col>
+                        </ion-row>
+                        
+                     
+                <ion-row>
+                    <ion-col>
+                           <p>最近登入时间:</p>
+                    </ion-col>
+                    <ion-col>
+                        <p class="yellow">2017-11-04 10:19:50
+                 </ion-col>
+                    </ion-row>
+               
+
+                    <ion-row>
+                            <ion-col>
+                                   <p>最近登入时间:</p>
+                            </ion-col>
+                            <ion-col>
+                                <p class="yellow">2017-11-04 10:19:50
+                         </ion-col>
+                            </ion-row>
+                  </div>
+                <br>
+
+                  <div id="ones" align="center">
+                     
+                            <ion-col>
+                                
+                                 <h3 style="text-align:justify;" class="yellow">登录密码修改 </h3> 
+                        <div id="input">
+                               <br>
+                               <input  style="text-align:justify; " type="text" placeholder="原密码"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                               <br>
+                               <br>
+                               <input type="text" placeholder="确认新密码"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                               <br>
+                               <br>
+                               <input type="text" placeholder="确认新密码: RMB"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                               <br>
+                               <br>
+                               <button style=" margin:0px; width:50%;" color=gold class="text-black" ion-button>     
+                                 提交
+                         </button>
+                             </div>
+                             
+                             </ion-col>
+                             </div>
+                            <br>
+ 
+                             <div id="ones" padding>
+                             <ion-col>
+                                 
+                                  <h3 style="text-align:justify;" class="yellow">提款密码修改 </h3> 
+                                 <div id="input">
+                                <br>
+                                <input type="text" placeholder="原密码:  RMB"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                                <br>              
+                                <br>
+                                <input type="text" placeholder="新密码: RMB"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                                <br>
+                                <br>
+                                <input type="text" placeholder="取款金额: RMB"  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+                                <br>
+                                <br>
+                                <button style=" margin:0px; width:50%;" class="text-black" color=gold ion-button>     
+                                  请确认新密码 
+                                </button>
+                         
+                              </div>
+                              
+                              </ion-col>
+ </div>
+             </div>
+             
+             <page-footer [content]="c" style="text-align:left"
+             ></page-footer>
+ 
+ 
+ 
+             
+   </ion-content>
+ 
+   <ion-footer>
+    <page-tabs2 [activePersonal]="true"></page-tabs2>
+  </ion-footer>
+                

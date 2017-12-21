@@ -1,0 +1,94 @@
+<ion-header>
+        <page-navbar [titleText]="'优惠活动'">
+          </page-navbar>    
+    </ion-header>
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+
+
+  <page-header></page-header>
+
+        
+   <ion-grid align="center" padding style="padding-bottom: 24px;">
+
+            <div style="width: 100%;
+            margin: 0 auto;
+            padding-bottom: 10px;">
+                    <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px; " class="classic"  value="all" id="type" name="category" [ngModel]="'all'"  #category="ngModel" (ngModelChange)="showButton(category.value)">
+                            <option value="all" selected>所有优惠</option>
+                            <option value="LiveGame">娱乐场</option>
+                            <option value="TeleGame">电投娱乐</option>
+                            <option value="SportBook">体育博彩</option>
+                            <option value="EGame">角子老虎</option>
+                            <option value="Fish">捕鱼</option>
+                            <option value="Lottery">彩票</option>
+                            <option value="VIP">特色优惠</option>
+                      </select>
+                </div>
+
+            <ion-row *ngIf="category.value == 'all'">
+                    <ion-col class="items" col-6 *ngFor="let item of arr;let i = index;" (click)="stackPage(item)" >  
+                        <img src="./assets/promotion/{{item}}.png"/>
+                    </ion-col>
+                    
+                    <ion-col [hidden]="!hideButton" col-12>
+                        <div >
+                            <button  (click)="showMore()" ion-button color=dark full icon-right >更多优惠 <ion-icon name="md-arrow-dropdown"></ion-icon>
+                            </button>
+                        </div>
+                    </ion-col>
+            </ion-row>
+            <ion-row *ngIf="category.value == 'LiveGame'">
+                <ion-col class="items" col-6 *ngFor="let item of [7,8,9,10,11];let i = index;" (click)="stackPage(item)" >  
+                    <img src="./assets/promotion/{{item}}.png"/>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="category.value == 'TeleGame'">
+                <ion-col class="items" col-6 *ngFor="let item of [6];let i = index;" (click)="stackPage(item)" >  
+                    <img src="./assets/promotion/{{item}}.png"/>
+                </ion-col>
+           </ion-row>
+           <ion-row *ngIf="category.value == 'SportBook'">
+              <ion-col class="items" col-6 *ngFor="let item of [19,12];let i = index;" (click)="stackPage(item)" >  
+                  <img src="./assets/promotion/{{item}}.png"/>
+              </ion-col>
+         </ion-row>
+         <ion-row *ngIf="category.value == 'EGame'">
+            <ion-col class="items" col-6 *ngFor="let item of [1,2,3,4];let i = index;" (click)="stackPage(item)" >  
+                <img src="./assets/promotion/{{item}}.png"/>
+            </ion-col>
+       </ion-row>
+       <ion-row *ngIf="category.value == 'Fish'">
+          <ion-col class="items" col-6 *ngFor="let item of [13];let i = index;" (click)="stackPage(item)" >  
+              <img src="./assets/promotion/{{item}}.png"/>
+          </ion-col>
+     </ion-row>
+     <ion-row *ngIf="category.value == 'Lottery'">
+        <ion-col class="items" col-6 *ngFor="let item of [5];let i = index;" (click)="stackPage(item)" >  
+            <img src="./assets/promotion/{{item}}.png"/>
+        </ion-col>
+   </ion-row>
+   <ion-row *ngIf="category.value == 'VIP'">
+      <ion-col class="items" col-6 *ngFor="let item of [20,14,15,16,17,18];let i = index;" (click)="stackPage(item)" >  
+          <img src="./assets/promotion/{{item}}.png"/>
+      </ion-col>
+ </ion-row>
+    </ion-grid>
+
+
+
+
+    
+
+
+<page-footer [content]="c"></page-footer>
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

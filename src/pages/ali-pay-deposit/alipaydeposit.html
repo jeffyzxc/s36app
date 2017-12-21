@@ -1,0 +1,73 @@
+<ion-header>
+    <page-navbar [titleText]="'我要存款'">
+      </page-navbar>    
+</ion-header>
+
+      
+    
+<ion-content [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+
+  <page-header>
+  </page-header>
+    
+  <div class="container" style="padding-bottom:26px;">
+      <form id="AliPayDepositForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="clubs-row">
+              
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">金额：</div>
+            <input  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-number="The field Amount must be a number." data-val-range="单笔最低存款100元，最高30万元" data-val-range-max="300000" data-val-range-min="100" data-val-regex="请输入整数" data-val-regex-pattern="([0-9]+)" data-val-required="请输入存款数额" id="DepositAmount" input-filter="numeric" input-filter-options-integer="true" maxlength="6" name="Amount" placeholder="RMB" type="text" value=""
+            required ngModel #Amount="ngModel">
+            <span  *ngIf="Amount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="Amount" data-valmsg-replace="true">
+              <span for="DepositAmount" class="">请输入存款数额</span>
+            </span>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">存到沙龙会S36银行账号：</div>
+            <select  style="border-radius: 4px;"   class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-number="The field ToBankAccount must be a number." data-val-required="请选择Clubs存款账户" name="ToBankAccount"
+            required ngModel #ToBankAccount="ngModel">
+              <option value="">请选择</option>
+              <option value="1148">农业银行 - 周XX - 064C</option>
+              <option value="1056">农业银行 - 吴XX - 861A</option>
+              <option value="1452">农业银行 - 贺XX - 377B</option>
+              <option value="1453">农业银行 - 钱XX - 076D</option>
+            </select>
+            <span *ngIf="ToBankAccount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="ToBankAccount" data-valmsg-replace="true">
+              <span for="ToBankAccount" class="">请选择Clubs存款账户</span>
+            </span>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">付款人姓名：</div>
+            <input  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请输入存款人姓名" name="PayerName" placeholder="例如：张三" type="text" value=""
+            required ngModel #PayerName="ngModel">
+            <span *ngIf="PayerName.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="PayerName" data-valmsg-replace="true">
+              <span for="PayerName" class="">请输入存款人姓名</span>
+            </span>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">存款时间：</div>
+            <ion-datetime  style="border-radius: 4px;"  displayFormat="M-D-YYYY HH:m:s" pickerFormat="M-D-YYYY HH:m:s" name="myDate" [(ngModel)]="myDate" class="form-control input-lg clubs-input clubs-datepicker valid">
+                
+              </ion-datetime>
+            <span class="field-validation-valid" data-valmsg-for="DepositTime" data-valmsg-replace="true"></span>
+          </div>
+          <div class="clubs-row"><div class="clubs-row" style="margin:0px;color:green">备注：</div>
+            <textarea  style="font-size:18px;border-radius: 4px;"  class="clubs-textarea" cols="40" id="Remark" name="Remark" placeholder="" rows="5"></textarea>
+            <span class="field-validation-valid" data-valmsg-for="Remark" data-valmsg-replace="true"></span>
+          </div>
+          <div align="center">
+              <button type="submit" style="width: 80%;color:black;" ion-button color=gold>确认</button>
+          </div>
+      </form>
+  </div>
+
+  <page-footer [content]="c">
+  </page-footer>
+
+</ion-content>
+  
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

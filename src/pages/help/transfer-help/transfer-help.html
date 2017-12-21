@@ -1,0 +1,35 @@
+<ion-header>
+    <page-navbar  [titleText]="'转账相关'">
+      </page-navbar>    
+</ion-header>
+    
+    
+    <ion-content [fullscreen]="true" class="black-background" #c>
+    
+      <page-header>
+    
+      </page-header>
+    
+      <div padding style="padding-bottom: 26px;">
+
+          <h3 style="color: #e0a422;">如何“户内转帐”？ </h3>
+          <p style="color:gray">具体请查看 <a [navPush]="transfer" style="color:#feb902;text-decoration: none;">“点击进入转帐教程”</a></p>
+          <h3 style="color: #e0a422;">为什么我不能进行户内转账？</h3>
+          <p style="color:gray">提示“转出帐户不接受转帐”是怎麽回事？有以下两种可能：<br>
+            第一，新注册会员并没有进入过对应游戏馆；  <br>
+           第二，没有关闭相对应的游戏页面； <br>
+           第三，游戏馆正在进行维护</p> 
+          <h3 style="color: #e0a422;"> 我可不可以将钱转到另一个会员帐号上？</h3>
+          <p style="color:gray;margin-bottom:0px;"> 本公司是不支持帐号与帐号之间的转帐。</p>
+      </div>
+
+      
+          <page-footer [content]="c"></page-footer>
+      
+    
+    
+    </ion-content>
+    <ion-footer>
+        <page-tabs2></page-tabs2>
+      </ion-footer>
+                    

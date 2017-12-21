@@ -1,0 +1,73 @@
+page-registerstep2 {
+
+    .clubs-account {
+        color: #fff;
+        margin: 20px auto;
+    }
+    
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .clubs-account .success-title {
+        color: #fff;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    
+    .clubs-row {
+        width: 100%;
+        margin: 5px 0px;
+        float: left;
+        position: relative;
+    }
+
+    .clubs-account .success-title2 {
+        font-size: 20px;
+        color: #efac1c;
+        margin: 1em 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .borgrad {
+        border: 2px solid transparent;
+        border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        -webkit-border-image: -webkit-linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        -moz-border-image: -moz-linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        border-image-slice: 1;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+    
+  select {
+    
+      /* styling */
+      background-color: #cacacc;
+    color:#747474 !important;        
+      border-radius: 4px;
+      display: inline-block;
+      font: inherit;
+      line-height: 1.5em;
+      
+      padding: 0.5em 8.5em 0.5em 1em;
+    
+      /* reset */
+    
+      margin: 0;      
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+
+
+
+
+}

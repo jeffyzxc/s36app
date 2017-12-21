@@ -1,0 +1,196 @@
+<ion-header>
+    <page-navbar [titleText]="'账户注册'">
+      </page-navbar>    
+</ion-header>
+
+
+
+
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+    <page-header></page-header>
+  
+    
+    <div id="content" style="padding-bottom:26px;">
+            <div id="country">
+                <div id="border"> 
+                    <div id="label">
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <ion-list>
+
+
+                <b style="font-size:40px; color:#fe8b0c;   margin: 0 auto; width:100%; margin-bottom:10px;" stacked>注册</b>       
+                <ion-label   style="font-size:15px; color:green;  margin: 0 auto; width:100%; margin-bottom:-0px;" stacked>称谓：</ion-label>       
+ 
+
+
+                <ion-row  class="dates">
+                        
+                  
+                        <form name="formCats">
+                                <div class="radio-group" style="    margin-left: 3px;" >
+                                 
+                                  <input  class="radio radio-1" type="radio" value="1" name="gender1"  id="radio1"  required ngModel #gender1="ngModel" [checked]="gender1.value == 1"/>
+                                 
+                                 
+
+                               
+                                
+                                  <input  class="radio radio-2" type="radio" value="2" name="gender1" id="radio2" required ngModel #gender1="ngModel" [checked]="gender1.value == 2" />
+                               
+                                </div>
+                              </form>
+
+                </ion-row>
+
+                
+                        <ion-item class="gender1"   *ngIf="(gender1.errors?.required || gender1.errors?.required)  && f.submitted">
+                                <p> *验证码错误！</p>
+                        </ion-item>    
+                                   
+                  <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>用户姓名：</ion-label>     
+                    <input type="text" placeholder="例如：张三"  minlength="6" required
+                    style=" font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282"
+                    name="amount" required ngModel #amount="ngModel">             
+            
+            
+              <ion-item *ngIf="amount.errors?.required && f.submitted">
+                  <p > *请输入用戶姓名。</p>
+                </ion-item>
+                <ion-item *ngIf="amount.errors?.minlength && amount.touched">
+                    <p>6 到 14 位小写英文和数字组成。</p>
+                </ion-item>
+          
+                
+             
+                <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked> 国家地区: </ion-label>     
+                <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px; " class="classic"  name="amount22"  required ngModel #amount22="ngModel">
+                    <option value="" disabled selected>请选择</option> 
+                  <option>中国</option>
+                    <option>香港</option>
+                    <option>澳门</option>
+                    <option>台湾</option>
+                    <option>日本</option>
+                    <option>韩国</option>
+                    <option>泰国</option>
+                    <option>越南</option>
+                    <option>马来西亚</option>
+                    <option>其他</option>
+                  </select>
+
+                  <ion-item *ngIf="amount22.errors?.required && f.submitted">
+                      <p> *请输入国家。</p>
+                    </ion-item>
+
+
+ 
+                <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>电话：</ion-label>          
+                <input type="text" placeholder="有效的手机号" minlength="6" required style=" font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+                name="amount2" required ngModel #amount2="ngModel">             
+        
+        
+          <ion-item *ngIf="amount2.errors?.required && f.submitted">
+              <p> *请输入电话号码。</p>
+            </ion-item>
+            <ion-item *ngIf="amount2.errors?.minlength && amount2.touched">
+                <p>6 到 14 位小写英文和数字组成。</p>
+            </ion-item>
+
+     
+     
+       <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>电子邮件：</ion-label>               
+            <input type="text" placeholder="123@mail.com" minlength="6" required  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+            name="amount3" required ngModel #amount3="ngModel">             
+    
+    
+      <ion-item *ngIf="amount3.errors?.required && f.submitted">
+          <p> *请输入E-mail。</p>
+        </ion-item>
+        <ion-item *ngIf="amount3.errors?.minlength && amount3.touched">
+            <p>6 到 14 位小写英文和数字组成。</p>
+        </ion-item>
+    
+        <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>邀请码 :</ion-label>            
+        <input type="text" placeholder="如果没有,可以不填" style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+        name="amount4" ngModel #amount4="ngModel">             
+
+
+  
+    <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>如何得知沙龙会</ion-label>               
+    <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px; " class="classic"  name="amount1"  required ngModel #amount1="ngModel">
+        <option value="" disabled selected>请选择</option> 
+      <option>网络广告</option>
+        <option>陆地广告</option>
+        <option>论坛</option>
+        <option>搜索引擎</option>
+        <option>朋友/网友</option>
+        <option>其他 </option>
+         
+      </select>
+
+      <ion-item *ngIf="amount1.errors?.required && f.submitted">
+          <p> *请选择如何得知沙龙会。</p>
+        </ion-item>
+        
+
+        <br>
+        <br>
+              <div style="display:flex;
+              align-items:center;
+              width: 95%;" >
+                
+                <input type="text" placeholder="如果没有,可以不填" minlength="4" required  style="float:left" style=" font-size:1.25em;   height:47px; padding:17px; border-radius:4px; border: 0px solid;  width:100%; background-color:#cacacc;color:#818282"
+                name="amount7" required ngModel #amount7="ngModel">  
+
+                <div style="display: inline-block;">
+                    <img style="margin-top: 2px;" src="./assets/captcha/BotDetectCaptcha.jpg" width="100%" height="42px" alt="">
+                </div>
+
+
+
+              </div>
+              <ion-item style="display:block;" *ngIf="(amount7.errors?.required || amount7.invalid) && f.submitted">
+                  <p> *验证码错误！</p>
+                </ion-item>
+
+
+<br>
+
+ 
+<div class="check">
+  <input type="checkbox"    style=" font-size:1.25em; position: relative;
+  top: 4px;  height:17px;  border-radius:4px; border: 0px solid;  margin-left:-2.8%; width:5%; background-color:#cacacc;color:#818282"
+       name="amount8" required ngModel #amount8="ngModel">    
+
+
+
+       <span class="spanko" style="color:white;">我确定我已年满18岁，及已阅读并同意相关之款及细则，并保证遵守当地法律规定。</span> 
+ 
+ 
+       <ion-item stlye="margin-bottom:25%;" *ngIf="amount8.errors?.required && f.submitted">
+           <p> *请同意条款。</p>
+         </ion-item>
+</div>
+</ion-list>
+
+
+<div>
+    <button  (click)="nextPage(f.valid)" style="padding: 0px;" color=gold type="submit" class="text-black ctm-button" ion-button>
+        提交
+    </button>
+</div>
+
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+<page-footer [content]="c" style="text-align:left"
+></page-footer>
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

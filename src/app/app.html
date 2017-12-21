@@ -1,19 +1,39 @@
-<ion-menu [content]="content">
+<ion-menu side="right"  [swipeEnabled]="false" [content]="content" >
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color=blue>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+  <ion-content class="lightblue-background">
+    <ion-list class="lightblue-background" >
+      <div *ngFor="let p of menuData;let i = index;">
+          <div  *ngIf="p.child?.length > 0">
+              <button ion-item  style="color:white;" class="darkblue-background" (click)="show[i] = !show[i]" icon-start>
+                  {{p.title}}
+                  <ion-icon name="ios-arrow-back-outline" *ngIf="!show[i]" item-start></ion-icon>
+                  <ion-icon name="ios-arrow-down-outline" *ngIf="show[i]" item-start></ion-icon>
+              </button>
+          </div>
+          <div  *ngIf="p.child?.length <= 0">
+              <button menuClose ion-item  style="color:white;" class="darkblue-background" (click)="openPage(p.link)" icon-start>
+                  {{p.title}}
+                  <ion-icon name="ios-arrow-back-outline" item-start></ion-icon>
+              </button>
+          </div>
+
+        <ion-list class="lightblue-background" *ngIf="p.child?.length > 0 && show[i]">
+            <button menuClose ion-item *ngFor="let c of p.child" style="color:white;" class="darkblue-background" (click)="openPage(c.link)" icon-start>
+              {{c.title}}
+              <ion-icon name="ios-arrow-back-outline" item-start></ion-icon>
+            </button>
+        </ion-list>
+      </div>
+
     </ion-list>
   </ion-content>
 
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" #content ></ion-nav>

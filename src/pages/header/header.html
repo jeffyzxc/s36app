@@ -1,0 +1,68 @@
+<ion-row>
+    <ion-col *ngIf="!isLogin"  style="text-align: center;">
+    <a *ngIf="!isLogin"  class="yellow-block" (click)="login()" >
+        <img style="padding-top: 1px;padding-bottom: 1px;"  class="btn-register-img" src="./assets/header/btn_login.png" width="80%">
+    </a>
+
+
+    </ion-col>
+    <ion-col *ngIf="!isLogin"  id="signup-col" style="text-align: center;">
+      <a class="yellow-block" (click)="signup()">
+        <img style="padding-top: 1px;padding-bottom: 1px;" class="btn-register-img" src="./assets/header/btn_register.png" width="80%">
+    </a> 
+    </ion-col>
+    <ion-col *ngIf="isLogin"  style="text-align: left;background-color:rgb(75, 75, 75);color:white">
+        <ion-grid style="background-color:rgb(75, 75, 75);">
+                    <ion-row style="margin-top: -2px;">
+                        <ion-col id="name" style="color:#e0a422;/*font-size: 18px;padding-bottom: 0px;padding-top: 0px;padding-right:0px;*\" col-7>     
+                                <span>用戶名稱：cssalon123</span>
+                        </ion-col>
+                        
+                        <ion-col style="padding-bottom: 0px;padding-top: 0px;padding-left:0px;" col-5> 
+                            
+                                                            <button [hidden]="!settingsPage" (click)="navigateSettings()" style="
+                                                            float: right;
+                                                            color:rgb(0, 0, 0);
+                                                            border-radius: 8px;
+                                                            background-color:#e0a422;
+                                                            padding: 4px;
+                                                            left: 3px;
+                                                            margin-top: 0px;
+                                                            " ion-button small clear icon-left><ion-icon  style="font-size: 1.2em !important;width: 20px;" name="md-settings"></ion-icon> 设置</button>
+                                                            
+                                                            <button [hidden]="settingsPage" (click)="navigateSettings()" style="
+                                                            float: right;
+                                                            color:white;
+                                                            padding: 0px;
+                                                            margin-top: 0px;" ion-button small clear icon-left><ion-icon  style="font-size: 1.2em !important;width: 20px;" name="md-settings"></ion-icon> 设置</button>
+                                                           
+                                                           
+                                                           
+                                                            <button [hidden]="settingsPage" style="float:right;color:white;
+                                                            margin-top: 0px;padding-left: 0px;" (click)="signOut()"  ion-button clear small> 
+                                                                
+                                                                <span style="height: 50%;
+                                                                width: 100%;
+                                                                border-right: 1px solid white;
+                                                                position: absolute;
+                                                                left: -6px;
+                                                                top: 25%;padding-left: 0px;"></span>  <span style="margin-right: 10px;" class="button-inner">登出</span>
+                                                            
+                                                            </button>
+                                                            <button [hidden]="!settingsPage"  style="float:right;color:white;left: 9px;
+                                                            margin-top: 0px;padding-left: 0px;" (click)="signOut()"  ion-button clear small><span style="height: 50%;
+                                                            width: 100%;
+                                                            border-right: 1px solid white;
+                                                            position: absolute;
+                                                            left: -6px;
+                                                            top: 25%;padding-left: 0px;"></span>   <span style="margin-right: 10px;" class="button-inner">登出</span></button>    
+                        </ion-col>   
+                    </ion-row>
+                    <ion-row>
+                            <ion-col style="padding-bottom: 0px;">主帳號餘額：</ion-col>
+                            <ion-col style="color:#e0a422;padding-bottom: 0px;" text-right>¥34,577 »»»</ion-col>
+                    </ion-row>
+        
+        </ion-grid>
+    </ion-col>
+</ion-row>

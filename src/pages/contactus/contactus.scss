@@ -1,0 +1,54 @@
+page-contactus {
+    .clubs-contactus table {
+        width: 100%;
+        text-align: center;
+        color: #8f8f8f;
+        margin: 1.2em 0;
+        border-collapse: collapse;
+        border: 2px solid #ffffff;
+    }
+
+    .clubs-contactus table tr td {
+        padding: .5em 0;
+        border: 1px solid #ffffff;
+        vertical-align: middle;
+    }
+
+    .clubs-color-white {
+        color: #fff;
+    }
+
+    .clubs-color-orange {
+        color: #e0a422;
+    }
+
+    .clubs-contactus h3 {
+        font-size: 18px;
+        margin: 1em 0 0 0;
+        color:gray;
+    }
+
+    .clubs-contactus table tr td a img {
+        max-width: 85px;
+        margin: 0 auto;
+    }
+    
+    .clubs-img-width {
+        /*width: 100%; */
+        height: auto;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .col-xs-4 {
+        width: 33.33333333%;
+    }
+    
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+        float: left;
+    }
+
+    
+}

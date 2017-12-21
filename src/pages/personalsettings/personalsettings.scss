@@ -1,0 +1,39 @@
+page-personalsettings{
+
+    .yellow{
+        color: #e0a422;
+    }
+    
+    #all{
+        color:white;
+        text-align: center;
+        padding: 10px;
+      
+    
+    }
+    
+    #ones{
+        
+        width: 100% !important;
+        padding: 1px  ;
+        position: relative;
+        margin: auto;
+        border: 2px solid transparent;
+        
+        border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        border-image-slice: 1;
+        // border: 2px solid green; width: 330px;  padding: 25px;margin: 25px;
+      //    border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        }
+       
+     
+    
+    #all ion-row p{
+        line-height: 0px;
+        text-align: justify;
+        
+    }
+    
+    
+     
+}

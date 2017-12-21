@@ -1,0 +1,143 @@
+<ion-header>
+        <page-navbar [titleText]="'账户注册'">
+          </page-navbar>    
+    </ion-header>
+    
+    
+
+
+
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+    <page-header></page-header>
+  
+    
+    <div id="content" style="padding-bottom:26px;">
+            <div id="countryz">
+                <div id="border"> 
+                    <div id="label">
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <ion-list>
+
+                <b style="font-size:40px; color:#fe8b0c;  margin: 0 auto;   margin-bottom:10px;" stacked>注册</b>        
+                    
+                  <!-- <ion-label style="font-size:15px; color:green;  margin: 0 auto; width:100%; margin-bottom:-0px;" stacked>用户账号：cs</ion-label> -->
+                  <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>用户账号：cs</ion-label>            
+                    <input type="text" placeholder="例如：abc123456"   minlength="6" required 
+                    style="padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282"
+                    name="amount" required ngModel #amount="ngModel">             
+            
+            
+              <ion-item *ngIf="amount.errors?.required && f.submitted">
+                  <p > *请输入用户帐号。</p>
+                </ion-item>
+                <ion-item *ngIf="amount.errors?.minlength && amount.touched">
+                    <p>6 到 14 位小写英文和数字组成。</p>
+                </ion-item>
+               
+                      
+                <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>用户密码：</ion-label>     
+                    <input type="text" placeholder="输入长度为6-15个字符" minlength="6" required 
+                    style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+                    name="amount1" required ngModel #amount1="ngModel">             
+            
+            
+              <ion-item *ngIf="amount1.errors?.required && f.submitted">
+                  <p> *请输入用户密码。</p>
+                </ion-item>
+                <ion-item *ngIf="amount1.errors?.minlength && amount1.touched">
+                    <p>6 到 14 位小写英文和数字组成。</p>
+                </ion-item>
+
+
+                  
+                <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>确认用户密码：</ion-label>     
+                <input type="text" placeholder="再次输入密码" minlength="6" required 
+                style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+                name="amount2" required ngModel #amount2="ngModel">             
+        
+        
+          <ion-item *ngIf="amount2.errors?.required && f.submitted">
+              <p> *请输入确认用户密码。</p>
+            </ion-item>
+            <ion-item *ngIf="amount2.errors?.minlength && amount2.touched">
+                <p>6 到 14 位小写英文和数字组成。</p>
+            </ion-item>
+
+     
+    
+       <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>提款密码：</ion-label>   
+            <input type="text" placeholder="输入长度为6-15个字符" minlength="6" required  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+            name="amount3" required ngModel #amount3="ngModel">             
+    
+    
+      <ion-item *ngIf="amount3.errors?.required && f.submitted">
+          <p> *请输入提款密码。</p>
+        </ion-item>
+        <ion-item *ngIf="amount3.errors?.minlength && amount3.touched">
+            <p>6 到 14 位小写英文和数字组成。</p>
+        </ion-item>
+
+
+      
+        <ion-label class="label" style="font-size:15px; padding:0px; width:50%; color:green; " stacked>提款密码：</ion-label>   
+        <input type="text" placeholder="再次输入提款密码" minlength="6" required  style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282"
+        name="amount4" required ngModel #amount4="ngModel">             
+
+
+  <ion-item *ngIf="amount4.errors?.required && f.submitted">
+      <p> *请输入确认提款密码。</p>
+    </ion-item>
+    <ion-item *ngIf="amount4.errors?.minlength && amount4.touched">
+        <p>6 到 14 位小写英文和数字组成。</p>
+    </ion-item>
+
+
+        <!-- <ion-label style="font-size:15px; color:green;  margin: 0 auto; width:100%; margin-bottom:-0px;" stacked>确认提款密码：</ion-label>       
+        <input type="text"   formControlName="confirmwithdrawalpass"  placeholder="再次输入提款密码" style=" padding:15px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%;    height:47px;   background-color:#cacacc;color:#818282">             
+
+
+  <ion-item *ngIf="confirmwithdrawalpass.hasError('required') && confirmwithdrawalpass.touched">
+      <p> *请输入确认提款密码。</p>
+    </ion-item>
+ 
+  -->
+  
+            </ion-list>
+  
+        <!-- class[]="formgroup" -->
+            <!-- <button clear ion-button>Submit</button> -->
+            <!-- <button primary type="submit"  style="  margin: 0 auto; width:41%;" color=gold ion-button icon-left>     <ion-icon ios="ios-play" md="md-play"></ion-icon>
+                <b class="text-black">下一步</b>
+        </button> -->   
+        
+        <div id="btnreg">
+            <button  (click)="registernext(f.valid)" style="padding: 0px;" color=gold type="submit" class="text-black ctm-button" ion-button>
+            <!-- <img  style=' margin: 0 auto; height:100%; width:80%;' class="cs" src="./assets/banner/reg_btn.png"  > 
+            <img  style=' margin: 0 auto; width:100%;' class="cs" src="./assets/register/register_btn.jpg"  >
+            -->
+            下一步
+            </button>
+        </div>
+        <!-- <button primary type="submit">Submit Form</button> -->
+     
+                
+        </form>
+        
+
+        
+</div>
+</div>
+</div>
+
+</div>
+
+<page-footer [content]="c" style="text-align:left"
+></page-footer>
+
+</ion-content>
+
+<ion-footer>
+    <page-tabs2></page-tabs2>
+  </ion-footer>
+                

@@ -1,0 +1,67 @@
+<ion-header>
+        <page-navbar [titleText]="'我要存款'">
+          </page-navbar>    
+</ion-header>
+      
+    
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+    <page-header>
+    </page-header>
+
+    <div class="container_margin">
+        
+        <div class="container clubs-account" style="padding-bottom:26px;">
+            <div class="clubs-row">
+                <div class="clubs-row" style="margin:0px;color:green">请依照下列程度进行申请：</div>
+            </div>
+            <div class="clubs-row">
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">1.</div>客户存款前请点击这里联络在线客户获取我们的转账银行信息。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">2.</div>存款完成后，请您正确、完整及时的填写转账表格。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">3.</div>我们会在确认收到您的款项后，马上回为您添加款额。
+                        </div>
+        </div>
+            <div class="clubs-row">
+                <div class="clubs-row" style="margin:0px;color:green">注意事项：</div>
+            </div>
+            <div class="clubs-row">
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">1.</div>请您按照我们提供的请您按照我们提供的转账银行信息进行存款，若误存已停用的账户，本公司概不负责，感谢您的配合。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">2.</div>建议您在转账时输入带零头的金额，如：￥110、￥590、￥1010，并告知我们准备金额，以使能快速办理。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">3.</div>建议您使用同行转账到账时间相对较快。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">4.</div>如果您使用跨行转账的方式进行存款，需要您将“银行存根收据”或者“交易成功页面截图”发送电邮到cs@saloncs.com
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">5.</div>存款人姓名要和注册姓名一致，不允许第3方存款，最低存款金额为100元。
+                        </div>
+                        <div class="clubs-row">
+                            <div class="clubs-list-no">6.</div>如使用网上银行进行转账，请在转账“用途栏”注明用户名或注册姓名，并正确的填写交易流水号及存款时间，以便快速办理。<br>如需进一步的协助，请点击这里联络在线客服填写转账表格。
+                        </div>
+            </div>
+            <div align="center">
+                    <button (click)="atmdeposit()" ion-button color=gold style="width: 70%;color:black">填写转账表格</button>
+            </div>
+        </div>
+
+        <page-footer [content]="c">
+        </page-footer>
+        
+    </div>
+
+</ion-content>
+
+<ion-footer>
+        <page-tabs2></page-tabs2>
+</ion-footer>
+                
+    

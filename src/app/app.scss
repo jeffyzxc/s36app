@@ -14,3 +14,180 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.ios img.banner {
+    float:none;
+    //margin-top: 4px;
+}
+
+.md img.banner {
+    float: left;
+}
+
+.searchbar-ios.searchbar-left-aligned .searchbar-input {
+    padding-left: 40px;
+}
+
+.toolbar-title-ios{
+    font-weight: 500;
+}
+
+.bar-button-ios{
+    padding: 0 15px;
+    border-radius: 2px;
+    height: 32px;
+    border: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.toolbar-ios ion-title {
+    left: 0;
+    top: 0;
+    padding: 0 60px 1px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    pointer-events: none;
+}
+
+.toolbar-ios ion-title.banner-title {
+    left: 0;
+    top: 0;
+    padding: 0 10px 1px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    pointer-events: none;
+}
+
+.toolbar-title.toolbar-title-ios div {
+    float: left;
+}
+
+.toolbar-title.toolbar-title-ios img {
+    float: left;
+}
+
+
+.black-background {
+    background-color: #14111c
+}
+
+.lightblue-background {
+    background-color:#37354a
+}
+
+.darkblue-background {
+    background-color:#222130
+}
+
+.darkblue-background,.activated {
+    background-color:#222130
+}
+.item-md.activated{
+    background-color:#37354a
+}
+
+/*
+marquee,b,p,h3,h1,h2,h3,h4,h5,h6,ion-col,.yellow,ion-label,span,input::-webkit-input-placeholder,.classic,.help-table td,button,td,li,.clubs-row,div,select,.button-inner {
+    font-family: Georgia, Times New Roman, Microsoft YaHei, 微软雅黑, STXihei, 华文细黑, serif ;
+}
+*/
+
+.text-black {
+    color:black;
+}
+
+* {
+    /*
+    font-family: Georgia, Times New Roman, Microsoft YaHei, 微软雅黑, STXihei, 华文细黑, serif ;
+    */
+    font-family: Microsoft YaHei,Arial,Verdana,sans-serif;
+}
+
+.button-ios {
+    height: 2.2em !important;
+}
+
+
+ion-icon {
+    &[class*="appname-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    // custom icons
+    &[class*="wallet"] {
+        mask-image: url(../assets/icon/wallet-icon.png);
+    }
+    &[class*="transfer"] {
+        mask-image: url(../assets/icon/transfer-icon.png);
+    }
+
+    &[class*="home1"] {
+        mask-image: url(../assets/icon/home.png);
+    }
+
+    &[class*="cs"] {
+        mask-image: url(../assets/icon/cs.png);
+    }
+
+    &[class*="helpnav"] {
+        mask-image: url(../assets/icon/help.png);
+    }
+
+    &[class*="login"] {
+        mask-image: url(../assets/icon/btn_login.png);
+    }
+
+    &[class*="logout"] {
+        mask-image: url(../assets/icon/btn_logout.png);
+    }
+
+    &[class*="balance"] {
+        mask-image: url(../assets/icon/balance.png);
+    }
+
+    &[class*="history"] {
+        mask-image: url(../assets/icon/history.png);
+    }
+
+    &[class*="personal"] {
+        mask-image: url(../assets/icon/personal.png);
+    }
+
+    &[class*="transfer"] {
+        mask-image: url(../assets/icon/transfer.png);
+    }
+
+    &[class*="logoff"] {
+        mask-image: url(../assets/icon/logoff.png);
+    }
+
+
+
+    
+      
+
+
+}
+
+
+
+
+ion-navbar.toolbar {
+    min-height: 40px;
+}
+
+

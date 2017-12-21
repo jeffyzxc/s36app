@@ -1,0 +1,49 @@
+<ion-header>
+    <page-navbar [titleText]="'账户注册'">
+      </page-navbar>    
+</ion-header>
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+
+    <page-header></page-header>
+
+    <div>
+        <div class="container clubs-account" style="padding-bottom:68px;">
+            <div class="clubs-row success-title">
+                <span>注册</span>
+            </div>
+            <div class="clubs-row borgrad">
+
+                  
+                <div style="max-width:80%; margin:0 auto;padding-bottom: 10px;color:#e0a422;font-size:20px;" text-center>
+                     注册成功
+                </div>
+                <div  style="max-width:80%; margin:0 auto;padding-bottom: 5px;color:#e0a422;">
+                
+                   <button  (click)="goToDeposit()"style="color:black;" ion-button full color=gold>   立即存款</button>
+                </div>
+                <div style="max-width:80%; margin:0 auto;    padding-bottom: 5px;">
+                    <button  (click)="goToPromotion()" style="color:black;" ion-button full color=gold>查看优惠</button>
+                </div>
+                <div style="max-width:80%; margin:0 auto;">
+                    <button (click)="goToHome()"  style="color:black;"  ion-button full color=gold>返回首页</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="padding-top: 230px;">
+               <page-footer [content]="c" > </page-footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</ion-content>
+
+<ion-footer>
+    <page-tabs2></page-tabs2>
+  </ion-footer>
+                

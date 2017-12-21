@@ -1,0 +1,151 @@
+<ion-header>
+    <page-navbar [titleText]="'博彩规则'">
+      </page-navbar>    
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+
+    <page-header>
+        
+      </page-header>
+
+      <ion-row style="color:gray;" padding text-center>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:1,header:'条款规则' } ">条款规则 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:2,header:'传统百家乐' } ">传统百家乐 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:3,header:'免佣百家乐' } ">免佣百家乐 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:4,header:'骰宝盅' } ">骰宝盅 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:5,header:'轮盘' } ">轮盘 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:6,header:'龙虎' } ">龙虎 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:7,header:'21点' } ">21点 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:8,header:'角子老虎' } ">角子老虎 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:9,header:'时时彩' } ">时时彩 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:10,header:'快乐彩' } ">快乐彩 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:11,header:'足球' } "> 足球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:12,header:'篮球' } ">篮球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:13,header:'拳击' } ">拳击 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:14,header:'赛车' } ">赛车 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:15,header:'北欧两项' } ">北欧两项 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:16,header:'壁球' } ">壁球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:17,header:'冰球' } ">冰球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:18,header:'搏击比赛' } ">搏击比赛 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:19,header:'草地滚球' } ">草地滚球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:20,header:'超级过关' } ">超级过关 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:21,header:'电单车锦标赛' } ">电单车锦标赛 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:22,header:'冬季两项' } ">冬季两项 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:23,header:'飞镖' } ">飞镖 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:24,header:'盖尔人运动' } ">盖尔人运动 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:25,header:'橄榄球' } ">橄榄球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:26,header:'高尔夫' } ">高尔夫 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:27,header:'划艇' } ">划艇 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:28,header:'滑雪' } ">滑雪 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:29,header:'击剑' } ">击剑 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:30,header:'竞技' } ">竞技 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:31,header:'举重' } ">举重 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:32,header:'拉力赛' } ">拉力赛 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:33,header:'F1赛车' } ">F1赛车 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:34,header:'垒球' } ">垒球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:35,header:'马术' } ">马术 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:36,header:'美式足球' } ">美式足球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:37,header:'排球' } ">排球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:38,header:'乒乓球' } ">乒乓球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:39,header:'枪击' } ">枪击 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:40,header:'澳式榄球' } ">澳式榄球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:41,header:'板球' } ">板球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:42,header:'沙滩足球' } ">沙滩足球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:43,header:'射箭' } ">射箭 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:44,header:'室内曲棍球' } ">室内曲棍球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:45,header:'室内足球' } ">室内足球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:46,header:'手球' } ">手球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:47,header:'水球' } ">水球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:48,header:'体操' } ">体操 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:49,header:'跳台滑雪' } ">跳台滑雪 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:50,header:'铁人三项' } ">铁人三项 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:51,header:'网球' } ">网球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:52,header:'五人制足球' } ">五人制足球 </ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:53,header:'游泳' } ">游泳</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:54,header:'羽毛球' } ">羽毛球</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:55,header:'长曲棍球' } ">长曲棍球</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:56,header:'直排轮曲棍球' } ">直排轮曲棍球</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:57,header:'桌球' } ">桌球</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:58,header:'自行车' } ">自行车</ion-col>
+          <ion-col col-6 [navPush]="description" [navParams]="{ index:59,header:'棒球' } ">棒球</ion-col>
+      </ion-row>
+
+    <!--
+    <div class="terms-rules" align="center" style="display: block;" padding style="padding-bottom:26px;" >
+      <div style="width: 75%">
+          <li [navPush]="description" [navParams]="{ index:1,header:'条款规则' } ">条款规则 </li>
+          <li [navPush]="description" [navParams]="{ index:2,header:'传统百家乐' } ">传统百家乐 </li>
+          <li [navPush]="description" [navParams]="{ index:3,header:'免佣百家乐' } ">免佣百家乐 </li>
+          <li [navPush]="description" [navParams]="{ index:4,header:'骰宝盅' } ">骰宝盅 </li>
+          <li [navPush]="description" [navParams]="{ index:5,header:'轮盘' } ">轮盘 </li>
+          <li [navPush]="description" [navParams]="{ index:6,header:'龙虎' } ">龙虎 </li>
+          <li [navPush]="description" [navParams]="{ index:7,header:'21点' } ">21点 </li>
+          <li [navPush]="description" [navParams]="{ index:8,header:'角子老虎' } ">角子老虎 </li>
+          <li [navPush]="description" [navParams]="{ index:9,header:'时时彩' } ">时时彩 </li>
+          <li [navPush]="description" [navParams]="{ index:10,header:'快乐彩' } ">快乐彩 </li>
+          <li [navPush]="description" [navParams]="{ index:11,header:'足球' } "> 足球 </li>
+          <li [navPush]="description" [navParams]="{ index:12,header:'篮球' } ">篮球 </li>
+          <li [navPush]="description" [navParams]="{ index:13,header:'拳击' } ">拳击 </li>
+          <li [navPush]="description" [navParams]="{ index:14,header:'赛车' } ">赛车 </li>
+          <li [navPush]="description" [navParams]="{ index:15,header:'北欧两项' } ">北欧两项 </li>
+          <li [navPush]="description" [navParams]="{ index:16,header:'壁球' } ">壁球 </li>
+          <li [navPush]="description" [navParams]="{ index:17,header:'冰球' } ">冰球 </li>
+          <li [navPush]="description" [navParams]="{ index:18,header:'搏击比赛' } ">搏击比赛 </li>
+          <li [navPush]="description" [navParams]="{ index:19,header:'草地滚球' } ">草地滚球 </li>
+          <li [navPush]="description" [navParams]="{ index:20,header:'超级过关' } ">超级过关 </li>
+          <li [navPush]="description" [navParams]="{ index:21,header:'电单车锦标赛' } ">电单车锦标赛 </li>
+          <li [navPush]="description" [navParams]="{ index:22,header:'冬季两项' } ">冬季两项 </li>
+          <li [navPush]="description" [navParams]="{ index:23,header:'飞镖' } ">飞镖 </li>
+          <li [navPush]="description" [navParams]="{ index:24,header:'盖尔人运动' } ">盖尔人运动 </li>
+          <li [navPush]="description" [navParams]="{ index:25,header:'橄榄球' } ">橄榄球 </li>
+          <li [navPush]="description" [navParams]="{ index:26,header:'高尔夫' } ">高尔夫 </li>
+          <li [navPush]="description" [navParams]="{ index:27,header:'划艇' } ">划艇 </li>
+          <li [navPush]="description" [navParams]="{ index:28,header:'滑雪' } ">滑雪 </li>
+          <li [navPush]="description" [navParams]="{ index:29,header:'击剑' } ">击剑 </li>
+          <li [navPush]="description" [navParams]="{ index:30,header:'竞技' } ">竞技 </li>
+          <li [navPush]="description" [navParams]="{ index:31,header:'举重' } ">举重 </li>
+          <li [navPush]="description" [navParams]="{ index:32,header:'拉力赛' } ">拉力赛 </li>
+          <li [navPush]="description" [navParams]="{ index:33,header:'F1赛车' } ">F1赛车 </li>
+          <li [navPush]="description" [navParams]="{ index:34,header:'垒球' } ">垒球 </li>
+          <li [navPush]="description" [navParams]="{ index:35,header:'马术' } ">马术 </li>
+          <li [navPush]="description" [navParams]="{ index:36,header:'美式足球' } ">美式足球 </li>
+          <li [navPush]="description" [navParams]="{ index:37,header:'排球' } ">排球 </li>
+          <li [navPush]="description" [navParams]="{ index:38,header:'乒乓球' } ">乒乓球 </li>
+          <li [navPush]="description" [navParams]="{ index:39,header:'枪击' } ">枪击 </li>
+          <li [navPush]="description" [navParams]="{ index:40,header:'澳式榄球' } ">澳式榄球 </li>
+          <li [navPush]="description" [navParams]="{ index:41,header:'板球' } ">板球 </li>
+          <li [navPush]="description" [navParams]="{ index:42,header:'沙滩足球' } ">沙滩足球 </li>
+          <li [navPush]="description" [navParams]="{ index:43,header:'射箭' } ">射箭 </li>
+          <li [navPush]="description" [navParams]="{ index:44,header:'室内曲棍球' } ">室内曲棍球 </li>
+          <li [navPush]="description" [navParams]="{ index:45,header:'室内足球' } ">室内足球 </li>
+          <li [navPush]="description" [navParams]="{ index:46,header:'手球' } ">手球 </li>
+          <li [navPush]="description" [navParams]="{ index:47,header:'水球' } ">水球 </li>
+          <li [navPush]="description" [navParams]="{ index:48,header:'体操' } ">体操 </li>
+          <li [navPush]="description" [navParams]="{ index:49,header:'跳台滑雪' } ">跳台滑雪 </li>
+          <li [navPush]="description" [navParams]="{ index:50,header:'铁人三项' } ">铁人三项 </li>
+          <li [navPush]="description" [navParams]="{ index:51,header:'网球' } ">网球 </li>
+          <li [navPush]="description" [navParams]="{ index:52,header:'五人制足球' } ">五人制足球 </li>
+          <li [navPush]="description" [navParams]="{ index:53,header:'游泳' } ">游泳</li>
+          <li [navPush]="description" [navParams]="{ index:54,header:'羽毛球' } ">羽毛球</li>
+          <li [navPush]="description" [navParams]="{ index:55,header:'长曲棍球' } ">长曲棍球</li>
+          <li [navPush]="description" [navParams]="{ index:56,header:'直排轮曲棍球' } ">直排轮曲棍球</li>
+          <li [navPush]="description" [navParams]="{ index:57,header:'桌球' } ">桌球</li>
+          <li [navPush]="description" [navParams]="{ index:58,header:'自行车' } ">自行车</li>
+          <li [navPush]="description" [navParams]="{ index:59,header:'棒球' } ">棒球</li>
+          <li></li>
+      </div>
+
+    
+
+    </div>
+    -->
+
+    <page-footer [content]="c"></page-footer>
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

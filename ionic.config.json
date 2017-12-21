@@ -1,5 +1,8 @@
 {
   "name": "S36App",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "273c337c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

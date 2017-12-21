@@ -1,0 +1,26 @@
+<ion-header>
+  <page-navbar [titleText]="'捕鱼'">
+    </page-navbar>    
+</ion-header>
+
+            
+<ion-content  [fullscreen]="true" class="black-background" #c>
+
+              <page-header></page-header>
+              
+              <div padding style="padding-bottom:26px;padding-left:0px;padding-right:0px;">
+                  <img  *ngFor="let item of fishingList;" src="./assets/fishing/{{item}}.png" width="100%" alt="">
+                <!--
+                <img src="./assets/fishing/sa.png" width="100%" alt="">
+                <img src="./assets/fishing/ag.png" width="100%" alt="">
+                <img src="./assets/fishing/gg.png" width="100%" alt="">
+                -->
+              </div>
+
+
+              <page-footer [content]="c"></page-footer>
+</ion-content>
+<ion-footer>
+<page-tabs2></page-tabs2>
+</ion-footer>
+            

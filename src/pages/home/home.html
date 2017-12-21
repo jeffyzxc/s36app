@@ -1,18 +1,63 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+
+  <page-navbar>
+  </page-navbar>
+                
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content [fullscreen]="true" class="black-background" #c>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+            
+            <page-header></page-header>
+                <div (click)="showNotice()" class="block">
+                        <img   class="marquee-image" src="./assets/menu/speaker.png" alt="">
+                        <marquee class="marquee-text" style="color:white;" direction="left">
+                            好消息：万众期待的沙龙会【手机APP】已正式上线，赶快登入，随时随地体验尽情娱乐的刺激吧。
+                        </marquee>
+                </div>
+                <div class="carousel-inner">
+                    <a class="left carousel-control"> <span style="position: absolute;
+                      top: 50%;
+                      z-index: 5;
+                      display: inline-block;
+                      margin-top: -10px;
+                      left: 30%;"> <ion-icon (click)="prev()" style="zoom:1.0;" name="ios-arrow-back-outline"></ion-icon>
+                      </span>
+                      </a>
+                      <a  class="right carousel-control"> <span style="position: absolute;
+                        top: 50%;
+                        z-index: 5;
+                        display: inline-block;
+                        margin-top: -10px;"> <ion-icon (click)="next()" style="zoom:1.0;" name="ios-arrow-forward-outline"> </ion-icon>
+                        </span>
+                        </a>
+                        
+                    <ion-slides style="border-bottom:1px solid gray;" pager autoplay="2000" loop="true" speed="500" > 
+                          <ion-slide>
+                            <img src="./assets/banner/home_banner01.jpg">
+                          </ion-slide>
+                          <ion-slide >
+                            <img src="./assets/banner/home_banner02.jpg">
+                          </ion-slide>
+                          <ion-slide >
+                            <img src="./assets/banner/home_banner03.jpg">
+                          </ion-slide>
+                    </ion-slides>
+                </div>
+                      
+                 <ion-grid align="center" padding style="padding-bottom:24px;">
+                              
+                              <ion-row class="menu-row">
+                                      <ion-col class="items" col-4 *ngFor="let item of [1,2,3,4,5,7];let i = index;" (click)="stackPage(i)" >  
+                                          <img src="./assets/menu/Index0{{item}}.png"/>
+                                      </ion-col>
+                              </ion-row>
+                  </ion-grid>
+                  
+              <page-footer [content]="c"></page-footer>
 </ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

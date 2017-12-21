@@ -1,0 +1,55 @@
+
+
+page-deposit {
+
+    .yellow{
+        color: #e0a422;
+    }
+    
+    #balance{
+        color:white;
+        margin: 0px 20px;
+        text-align: center;
+        margin-top:20px; 
+    }
+
+
+    #balance ion-col {
+    line-height: 15px;
+    }
+    
+
+
+    h5 {
+        padding-bottom: 0px !important;
+    }
+
+
+    .one{
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+
+    @media screen and (max-width: 345px) {
+        h5{
+            font-size: 16px;
+        }
+        h6{
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        h5{
+            font-size: 15px;
+        }
+        h6{
+            font-size: 13px;
+        }
+    }
+
+
+}
+
+

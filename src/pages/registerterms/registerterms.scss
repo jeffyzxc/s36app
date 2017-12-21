@@ -1,0 +1,85 @@
+page-registerterms{
+
+    .space {
+        margin: 10px 0px;
+        padding: 15px 10px;
+    }
+
+
+    .clubs-row {
+        width: 100%;
+        margin: 5px 0px;
+        float: left;
+        position: relative;
+    }
+
+    .register-terms {
+        color: #a7a6ae;
+    }
+    .register-terms ul {
+        color: #e0a422 !important;
+        list-style: inherit !important;
+        padding:0px;
+    }
+
+    .register-terms li {
+        color: #e0a422;
+        margin-left: 1em;
+        margin-bottom: .2em;
+    }
+
+     .register-terms h1 {
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        text-align: center;
+    }
+
+    .register-terms h2 {
+        font-weight: bold;
+        font-size: 1em;
+        margin-bottom: .5em;
+    }
+
+
+    .clubs-more-btn {
+        width: 100%;
+        color: white;
+        background-color: #221f2a;
+        border: none;
+        padding: 3px;
+    }
+
+
+    
+    .borgrad {
+        border: 2px solid transparent;
+        border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        -webkit-border-image: -webkit-linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        -moz-border-image: -moz-linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+        border-image-slice: 1;
+    }
+
+    
+    .register-terms li p {
+        color: #626264;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .clubs-row {
+        width: 100%;
+        margin: 5px 0px;
+        float: left;
+        position: relative;
+        color:white; 
+        text-align: justify;
+      }
+      
+      #clubs{
+        margin-left:-30px;
+        margin-top: 30px;
+        text-align: center;
+      }
+}

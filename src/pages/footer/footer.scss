@@ -1,0 +1,30 @@
+page-footer {
+
+/*
+    span,p {
+        font-family: Georgia, Times New Roman, Microsoft YaHei, 微软雅黑, STXihei, 华文细黑, serif;
+   
+    }
+ */   
+    img{
+        height:17px;
+         
+    }
+
+    a{
+        text-underline-position: left;
+        
+    }
+
+
+
+    span{
+        border-right: 1px solid gray;
+        color: gray;
+        display: inline-block;
+        margin-bottom: .41666667em;
+        padding: 0 1em;
+    }
+
+    span:last-child{border:0px}
+}

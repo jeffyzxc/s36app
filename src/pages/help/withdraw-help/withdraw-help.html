@@ -1,0 +1,59 @@
+<ion-header>
+    <page-navbar  [titleText]="'取款相关'">
+      </page-navbar>    
+</ion-header>
+    
+    
+    <ion-content [fullscreen]="true" class="black-background" #c>
+    
+      <page-header>
+    
+      </page-header>
+    
+      <div padding style="padding-bottom: 26px;">
+          <h3> 如何申请提款？</h3>
+          <p>具体请查看 <a [navPush]="transfer"  [navParams]="{data:'transfer'}" style="color:#feb902;text-decoration: none;">“点击进入取款教程”</a></p>
+          <h3>申请提款需要注意些什么吗？</h3>
+          <p> 1）主帐户必须要有点数；<br>
+            2）达到存款金额的1倍有效投注额；<br>
+            3）户名必须要与提款银行帐号的用户姓名一致；<br>
+            
+ 		4）24小时内只有三次提款机会，请合理掌握金额。
+        </p>
+
+            <table class="help-table">
+                <tbody><tr>
+                    <td> 额度/币种</td>
+                    <td>人民币</td>
+                </tr>
+                <tr>
+                    <td>  最低提款</td>
+                    <td>100 元</td>
+                </tr>
+                <tr>
+                        <td>   最高提款</td>
+                        <td>30万元/每天</td>
+                    </tr>
+            </tbody>
+          </table>
+
+          <h3> 提款后多久才能到账？</h3>
+          <p> 本公司承诺，30万或以内的提款1小时内到账，如出现1小时内还未成功到账，我们会按照“超时赔付金”的优惠内容来进行相对应赔付处理（手机版“乐付”取款功能不包括在赔付范围内）。</p>
+          <h3> 为什么提款的时候显示我的余额为0？</h3>
+          <p>余额显示为0，指的是主账户上没有点数。申请提款前，您需要把其它游戏馆里的点数转到主账户上，才能显示可申请提款的余额。</p>
+          <h3> 我不想提款了，是否可以取消？</h3>
+          <p> 在提款未办理之前，是可以申请取消的。</p>
+          <h3>  为什么我成功填写取款表格，但1个小时后还没有收到钱？</h3>
+          <p style="margin-bottom:0px;">您可能填写银行信息时填写错误（卡号、户名等信息）， 您可以登陆后通过右上角“交易记录”查询交易状态和处理进度。如遇到失败，备注栏会显示有关失败的原因。或者您也可以直接联系我们24小时在线客服为您进行查询具体处理进度。</p>
+      </div>
+
+      
+            <page-footer [content]="c"></page-footer>
+      
+    
+    
+    </ion-content>
+    <ion-footer>
+        <page-tabs2></page-tabs2>
+      </ion-footer>
+                    

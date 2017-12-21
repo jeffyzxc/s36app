@@ -1,0 +1,32 @@
+<ion-header>
+    <page-navbar [titleText]="'帮助中心'">
+      </page-navbar>    
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="black-background" #c>
+
+  <page-header>
+
+  </page-header>
+
+
+  <ion-row class="menu-row" align="center" padding style="padding-bottom: 24px;">
+    <ion-col class="items" col-6 *ngFor="let item of [1,2,3,4,5,6];let i = index;" [navPush]="page[i]">  
+        <img src="./assets/help/help{{item}}.png"/>
+      
+        
+    </ion-col>
+  </ion-row>
+
+
+  <page-footer [content]="c">
+
+  </page-footer>
+
+
+</ion-content>
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              

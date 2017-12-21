@@ -1,0 +1,95 @@
+<div>
+    <ion-row style="padding-top: 6px;border-top: 3px solid #e0a244;height: 33% !important;" text-center>
+        
+        <!--
+        <ion-col [ngClass]="!(activeHome) ? 'idle' : 'active'" (click)="goToRoot()" class="active"><ion-icon name="appname-home" style="
+          width: 100%;"></ion-icon>
+          <span *ngIf="activeHome" style="width: 100%;">首页</span> 
+          <span *ngIf="!activeHome" style="width: 100%;">返回首页</span>  
+        </ion-col>
+        -->
+        <ion-col (click)="navigateTab(balance)" [ngClass]="!(activeBalance) ? 'idle' : 'active'" class="border-left-tabs2" >
+          <div>
+              <ion-icon name="appname-balance" style="
+              width: 100%;
+              font-size: 18px;"></ion-icon> 
+          </div>
+          <div style="margin-top: 4.5px;">
+              <span style="
+              width: 100%;">我的钱包</span>  
+          </div>
+        </ion-col>
+
+
+        <ion-col (click)="navigateTab(transfer)" [ngClass]="!(activeTransfer) ? 'idle' : 'active'" class="border-left-tabs2"  >
+          <div>
+          <ion-icon name="appname-transfer" style="
+          width: 100%;
+          font-size: 18px;"></ion-icon>
+          </div>
+          <div style="margin-top:5px;">
+              <span style="
+              width: 100%;">户内转账</span>
+          </div>  
+        </ion-col>
+        <ion-col  (click)="navigateTab(history)" [ngClass]="!(activeHistory) ? 'idle' : 'active'" class="border-left-tabs2" >
+          <div>
+              <ion-icon name="appname-history" style="width: 100%;
+              font-size: 18px;"></ion-icon>
+          </div>
+
+          <div style="
+          margin-top: 4.5px;">
+            <span style="
+            width: 100%;">交易记录</span>  
+          </div>
+          </ion-col>
+
+
+
+
+        <ion-col (click)="navigateTab(personal)" [ngClass]="!(activePersonal) ? 'idle' : 'active'" class="border-left-tabs2"  >
+          <div>
+              <ion-icon name="appname-personal"  style="width: 100%;
+                                font-size: 18px;"></ion-icon> 
+          </div>
+
+          <div style="margin-top:  5px;">
+
+              <span style="
+              width: 100%;">个人设定</span> 
+          </div>
+
+         </ion-col>
+
+
+          <ion-col  (click)="signout()" *ngIf="isLogin" class="idle">
+            <div style="">
+                <!--
+                <ion-icon name="appname-logout" style="
+                width: 80%;
+                font-size: 18px;
+                margin-right: 5px;">
+              </ion-icon>
+                <div style="width: 100%;margin-top:  5px;">
+                    <span  style="width: 100%;">登出</span>  
+                </div>
+            -->
+            <ion-icon name="appname-logoff" style="width: 100%;
+            font-size: 18px;"></ion-icon>
+            <div style="width: 100%;margin-top: 5px;">
+                <span  style="width: 100%;">登出</span>  
+            </div>
+            </div>
+          </ion-col>
+          <ion-col (click)="navigateTab(login)" *ngIf="!isLogin"  [ngClass]="!(activeHome) ? 'idle' : 'active'" class="active">
+              <div style="">
+                <ion-icon name="appname-logoff" style="width: 100%;
+                font-size: 18px;"></ion-icon>
+                <div style="width: 100%;margin-top: 5px;">
+                    <span  style="width: 100%;">登入</span>  
+                </div>
+              </div>
+          </ion-col>
+      </ion-row>  
+</div>

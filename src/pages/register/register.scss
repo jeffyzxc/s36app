@@ -1,0 +1,140 @@
+ 
+ page-register {
+ #label{
+    padding: 8px; 
+    width:100%;
+    margin-left: 10px;
+    text-align: justify;
+ }
+ /*
+#btnreg{
+    position: relative;
+    left:-40px;
+}
+*/
+ #border{
+    
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    position: relative;
+    border: 2px solid transparent;
+    
+    border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+    border-image-slice: 1;
+    // border: 2px solid green; width: 330px;  padding: 25px;margin: 25px;
+  //    border-image: linear-gradient(to right, rgba(83,31,170,1) 0%,rgba(34,117,174,1) 50%,rgba(37,170,108,1) 100%);
+    }
+    [icon-left] ion-icon, [icon-start] ion-icon {
+        font-size: 1.7em;
+        line-height: 0.67;
+       
+        pointer-events: none;
+        padding-right: 1.3em;
+    }
+ #countryz {
+    position: relative;
+    margin:0 auto;
+    
+    }
+    input:active, input:focus{
+        box-shadow:0px 0px 2px 3px #68bada;
+        
+    }
+    
+    .item {
+        padding-left: 16px;
+        padding-right: 0;
+        position: relative;
+        width:95%;
+       
+        font-size: 1.6rem;
+        font-weight: normal;
+        border-radius: 4px;
+        text-transform: none;
+        color: #000;
+        background-color: #d8a626;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .item p {
+        margin: 0 0 2px;
+        overflow: inherit;
+        font-size: 1.4rem;
+        line-height: normal;
+        text-overflow: inherit;
+        color: #fff;
+    }
+    .item.item-block .item-inner {
+        padding-right: 8px;
+         border-bottom:  0px solid #dedede; 
+    }
+
+    .item {
+        padding-right: 8px;
+         border-bottom:  0px solid #dedede; 
+    }
+
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+        border-bottom: none !important;
+    }
+    
+    
+
+    #countryz{
+        padding:10px;
+        padding-top: 18px;
+    }
+
+      .ctm-button {
+        background: url(../assets/register/btn_register.jpg) center left no-repeat;
+        width: 150px;
+        border: none;
+        margin-left: 0px;
+        background-size: cover;
+        padding-left: 70px;
+    }
+
+    .ctm-button span {
+        padding-left:40px;
+    }
+
+
+
+
+    @media only screen 
+    and (min-width: 768px) 
+    and (max-width: 1024px) 
+    and (orientation: portrait) 
+    and (-webkit-min-device-pixel-ratio: 2) {
+    
+        #label{
+            padding: 8px; 
+            width:100%;
+            margin-left: 25px;
+            text-align: justify;
+         }
+      
+        
+        } 
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-width: 1366px) 
+        and (orientation: portrait) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+        
+            #label{
+                padding: 8px; 
+                width:100%;
+                margin-left: 35px;
+                text-align: justify;
+             }
+          
+             button:active, button:focus {
+                -webkit-box-shadow:none !important;
+                box-shadow:none !important;
+            }
+            }
+}

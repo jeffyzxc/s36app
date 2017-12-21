@@ -1,0 +1,157 @@
+<ion-header>
+        <page-navbar [titleText]="'户内转帐'">
+          </page-navbar>    
+</ion-header>
+
+
+      
+<ion-content class="black-background" [fullscreen]="true" style="text-align: center;" #c> 
+                
+        <page-header></page-header>
+
+
+
+<div id="content">
+      
+    <div style="padding:10px;">
+        <div id="one"> 
+                <ion-row > 
+                    <ion-col col-12>
+                        <h6 style="color: #e0a422; font-size:1.70em;float:left;margin-bottom:0px;" >转出帐户</h6>
+                    </ion-col>
+                    <ion-col col-6>
+                            <h6 style="color:white;float:left;margin-bottom:0px;margin-top:2px;" >现时余额:</h6>
+                    </ion-col>
+                    <ion-col col-6>
+                            <h6 style="color: #e0a422;float:right;margin-bottom:0px;margin-top:2px;">-</h6>
+                    </ion-col>
+                </ion-row>
+                <ion-row >
+                        <ion-col col-12>
+                            <h6  style="color: #e0a422; font-size:1.70em;float:left;margin-bottom:0px;margin-top:2px;" >转入帐户</h6>
+                        </ion-col>
+                        <ion-col col-6>
+                            <h6 style="color:white;float:left;margin-top:0px;margin-top:2px;" >现时余额:</h6>
+                        </ion-col>
+                        <ion-col col-6>
+                            <h6 style="color: #e0a422;float:right;margin-top:0px;margin-top:2px;">-</h6>
+                        </ion-col>
+                </ion-row>
+            </div> 
+    </div>  
+
+          
+<br> 
+                  
+   
+                    <div id="country"  style="padding-bottom:24px;">
+         <!--
+
+         <br>
+         <br>
+    
+        
+
+           
+    
+            <br>
+            <br>
+              
+                <input type="text" placeholder="转帐金额"  style="margin-bottom:-5px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:95%; height:47px;   background-color:#cacacc;color:#818282">
+            
+                <br>
+                <br>
+                  
+
+   
+            
+                <ion-row>
+                    <ion-col>
+                        <div id="inputcap"> 
+                <input placeholder="验证码" type="text"  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:97%; height:47px;   background-color:#cacacc;color:#818282">         
+         </div>
+            </ion-col>
+ 
+                    <ion-col>
+                    <div id="image">
+                            <img  style="position:relative;margin-left:32%; bottom:0px;"src="./assets/captcha/BotDetectCaptcha.jpg" height="47px" alt="">
+                     <img src="./assets/captcha/BotDetectCaptcha.jpg"   alt="">
+                    <img src="./assets/captcha/BotDetectCaptcha.jpg" width="10%" height="48px" alt=""> 
+            </div>
+            <br>
+            <br>
+        </ion-col>
+
+
+
+        </ion-row>
+    -->
+    <ion-row style="
+    width: 95%;
+    margin: 0 auto;">
+        <ion-col col-12>
+            <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:100%; height:47px;   background-color:#cacacc;color:#818282" class="classic">
+                <option>转出帐户</option>
+                <option>主账户</option>
+                <option>贵族馆 AG</option>
+                <option>沙龙馆 SA</option>
+                <option>名人馆 HG</option>
+                <option>体育投注 IM</option>
+                <option>欧洲坊 BS</option>
+                <option>南美坊 PT</option>
+                <option>大洋坊 QT</option>
+                <option>北极坊</option>
+              </select>
+        </ion-col>
+        <ion-col col-12>
+            <select  style="font-size:1.11em; border: 0px solid; border-radius:4px;  width:100%; height:47px;   background-color:#cacacc;color:#818282" class="classic">
+                <option>转出帐户</option>
+                <option>主账户</option>
+                <option>贵族馆 AG</option>
+                <option>沙龙馆 SA</option>
+                <option>名人馆 HG</option>
+                <option>体育投注 IM</option>
+                <option>欧洲坊 BS</option>
+                <option>南美坊 PT</option>
+                <option>大洋坊 QT</option>
+                <option>北极坊</option>
+            </select>
+        </ion-col>
+        <ion-col col-12>
+            <input type="text" placeholder="转帐金额"  style="margin-bottom:-5px; font-size:1.11em; border: 0px solid; border-radius:4px;  width:100%; height:47px;   background-color:#cacacc;color:#818282">
+        </ion-col>
+        <ion-col style="padding-top:10px" col-9>
+             <div style="">
+                <input placeholder="验证码" style="font-size:1.11em;border: 0px solid;border-radius:4px;width:97%;height:47px;background-color:#cacacc;color:#818282;float: left;" type="text">         
+            </div>
+        </ion-col>
+        <ion-col style="padding-top:10px" col-3>
+
+            <div id="image">
+                <img alt="" height="47px" src="./assets/captcha/BotDetectCaptcha.jpg" style="position:relative;/* margin-left:32%; */bottom:0px;width: 100%;/* float: right; margin-left: 2px;*/">
+            </div>
+            <br>
+            <br>
+        </ion-col>
+    </ion-row>
+
+                <button style="  height:37px;  width:50%; " color=gold class="text-black" ion-button>     
+                            提交
+                    </button>
+    </div>   
+
+    
+    <page-footer [content]="c" style="text-align:left"
+    ></page-footer>
+    
+
+</div>
+
+
+      </ion-content>
+    
+
+<ion-footer>
+    <page-tabs2 [activeTransfer]="true"></page-tabs2>
+</ion-footer>
+            

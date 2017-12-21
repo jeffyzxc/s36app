@@ -1,0 +1,38 @@
+page-navbar {
+
+    
+    .bar-button-default-md:hover:not(.disable-hover), 
+    .bar-button-clear-md-default:hover:not(.disable-hover), 
+    .bar-button-md-default:hover:not(.disable-hover) {
+        color: #ffffff;
+    }
+
+    .block{
+        display: flex;
+        padding-top: 10px;
+        width:100%;
+        font-size: initial;
+        align-items: center;
+    }
+
+    .marquee-image{
+        width:8%;
+        height: 8%;
+        flex-direction: row;
+    }
+
+    .marquee-text{
+        width: 89%;
+        height: 100%;
+        font-size: 0.9em;
+        flex-direction: row;
+    }
+
+    ion-icon.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+        font-size: 3.5rem !important;
+    }
+
+
+
+    
+}   

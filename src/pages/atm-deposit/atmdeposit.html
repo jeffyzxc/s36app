@@ -1,0 +1,117 @@
+<ion-header>
+    <page-navbar [titleText]="'我要存款'">
+      </page-navbar>    
+</ion-header>
+
+      
+    
+<ion-content  [fullscreen]="true" class="black-background" style="text-align: center;" #c> 
+  
+  <page-header>
+  </page-header>
+
+  <div class="container" style="padding-bottom:26px;">
+      <div class="clubs-row">
+          <div class="clubs-row" style="margin:0px;color:green">请正确填妥以下[转账表格]中的每一项，您提交后，我们将及时为您处理。</div>
+      </div>
+      <form id="ATMDepositForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        
+          <div class="clubs-row"><div class="clubs-row" style="margin:0px;color:green">金额：</div>
+            <input  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-number="The field DepositAmount must be a number." data-val-range="单笔最低存款100元，最高30万元" data-val-range-max="300000" data-val-range-min="100" data-val-regex="请输入整数" data-val-regex-pattern="([0-9]+)" data-val-required="请输入存款数额" id="DepositAmount" input-filter="numeric" input-filter-options-integer="true" maxlength="6" name="DepositAmount" placeholder="RMB" type="text" value=""
+            required ngModel #DepositAmount="ngModel">
+            <span  *ngIf="DepositAmount.errors?.required && f.submitted"  class="field-validation-error" data-valmsg-for="DepositAmount" data-valmsg-replace="true">
+              <span for="DepositAmount" class="">请输入存款数额</span>
+            </span>
+            <div class="clubs-row clubs-color-white" style="margin:0px">单笔最低存款100元，最高30万元</div>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">存到沙龙会S36银行账号：</div>
+            <select  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-number="The field ToBankAccount must be a number." data-val-required="请选择Clubs存款账户" name="ToBankAccount"
+            required ngModel #ToBankAccount="ngModel">
+              <option value="">请选择</option>
+              <option value="1148">农业银行 - 周XX - 064C</option>
+              <option value="1056">农业银行 - 吴XX - 861A</option>
+              <option value="1452">农业银行 - 贺XX - 377B</option>
+              <option value="1453">农业银行 - 钱XX - 076D</option>
+            </select>
+            <span *ngIf="ToBankAccount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="ToBankAccount" data-valmsg-replace="true">
+              <span for="ToBankAccount" class="">请选择Clubs存款账户</span>
+            </span>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">存款方式：</div>
+            <select  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请选择存款方式" name="DepositType"
+            required ngModel #DepositType="ngModel">
+              <option selected="selected" value="">请选择</option>
+              <option value="ATM-TRAN">ATM柜员机(卡卡转账)</option>
+              <option value="ATM-CASH">ATM柜员机(现金转账)</option>
+              <option value="ONLINE">网上银行转账</option>
+              <option value="PHONE">电话银行转账</option>
+              <option value="COUNTER">柜台现金转账</option>
+            </select>
+            <span *ngIf="ToBankAccount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="DepositType" data-valmsg-replace="true">
+              <span for="DepositType" class="">请选择存款方式</span>
+            </span>
+          </div>
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">付款人银行名称：</div>
+              <select  style="border-radius: 4px;"  class="form-control input-lg clubs-input input-validation-error" data-val="true" data-val-required="请选择存款账户" name="PayerBank"
+              required ngModel #PayerBank="ngModel">
+                <option selected="selected" value="">请选择</option>
+              <option value="ICBK">工商银行</option>
+              <option value="ABOC">农业银行</option>
+              <option value="BKCH">中国银行</option>
+              <option value="PCBC">建设银行</option>
+              <option value="COMM">交通银行</option>
+              <option value="CMBC">招商银行</option>
+              <option value="MSBC">民生银行</option>
+              <option value="GDBK">广发银行</option>
+              <option value="EVER">光大银行</option>
+              <option value="HXBK">华夏银行</option>
+              <option value="FJIB">兴业银行</option>
+              <option value="SZDB">深圳发展银行</option>
+              <option value="SPDB">浦发银行</option>
+              <option value="BJCN">北京银行</option>
+              <option value="BOSH">上海银行</option>
+              <option value="DGCB">东莞银行</option>
+              <option value="GZCB">广州银行</option>
+              <option value="HZCB">杭州银行</option>
+              <option value="CHBH">渤海银行</option>
+              <option value="HSBC">汇丰银行</option>
+              <option value="HASE">恒生银行</option>
+              <option value="OTHR">其他</option>
+              </select>
+                <span *ngIf="ToBankAccount.errors?.required && f.submitted" class="field-validation-error" data-valmsg-for="PayerBank" data-valmsg-replace="true">
+                  <span for="PayerBank" class="">请选择存款账户</span>
+                </span>
+            </div>
+
+          <div class="clubs-row">
+            <div class="clubs-row" style="margin:0px;color:green">存款时间：</div>
+          <ion-datetime  style="border-radius: 4px;" displayFormat="M-D-YYYY HH:m:s" pickerFormat="M-D-YYYY HH:m:s" name="myDate" [(ngModel)]="myDate" class="form-control input-lg clubs-input clubs-datepicker valid">
+            
+          </ion-datetime>
+          <span class="field-validation-valid" data-valmsg-for="DepositDateTime" data-valmsg-replace="true"></span>
+         </div>
+          <div id="ATMBankInfo">
+          </div>
+          <div class="clubs-row"><div class="clubs-row" style="margin:0px;color:green">备注：</div><textarea style="font-size:18px;border-radius: 4px;" class="clubs-textarea valid" cols="40" id="Remark" name="Remark" placeholder="" rows="5"></textarea><span class="field-validation-valid" data-valmsg-for="Remark" data-valmsg-replace="true"></span></div>
+              <div style="max-width:80%; margin:0 auto;">
+          <div align="center">
+              <button type="submit" style="width: 70%;color:black" ion-button color=gold>确认</button>
+          </div>
+      </div>
+  
+  
+      </form>
+  </div>            
+  
+  <page-footer [content]="c">
+  </page-footer>
+
+</ion-content>
+
+<ion-footer>
+  <page-tabs2></page-tabs2>
+</ion-footer>
+              
